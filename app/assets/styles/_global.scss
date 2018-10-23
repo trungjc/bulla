@@ -1,0 +1,108 @@
+@font-face {
+    font-family: 'ACaslonPro';
+    src: url('../fonts/ACaslonPro-Bold.eot');
+    src: local('☺'), url('../fonts/ACaslonPro-Bold.woff') format('woff'), url('../fonts/ACaslonPro-Bold.ttf') format('truetype'), url('../fonts/ACaslonPro-Bold.svg') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ACaslonPro';
+    src: url('../fonts/ACaslonPro-Regular.eot');
+    src: local('☺'), url('../fonts/ACaslonPro-Regular.woff') format('woff'), url('../fonts/ACaslonPro-Regular.ttf') format('truetype'), url('../fonts/ACaslonPro-Regular.svg') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+html {
+    font-size:62.5%;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    border:10px solid white;
+
+}
+
+
+h1,h2,h3{
+    font-family: $headings-font-family;
+}
+
+.title {
+    font-family: $font-family-base;
+}
+
+h2 {
+    font-size: 3.8rem;
+    letter-spacing: -1px;
+}
+h3 {
+    font-size: 2.8rem;
+}
+h5 {
+    font-size: 1.6rem;
+    &.title {
+        font-size: 1.8rem;
+    }
+}
+h6 {
+    font-size: 1.4rem;
+
+}
+img {
+    max-width: 100%;
+}
+
+.semibold {
+    font-weight: 600;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.clearfix {
+    &:after,&:before {
+        content:"";
+        display: table;
+        clear: both;
+    }
+}
+
+.no-padding-top {
+    padding-top: 0;
+}
+@include media-breakpoint-up(lg) {
+    .container-fluid {
+        padding: 0 25px;
+    }
+}
+*[routerlink] {
+    cursor: pointer;
+    outline: none;
+}
+.link {
+    cursor: pointer;
+}
+.mute {
+    font-size: 1.2rem;
+   
+}
+.mute-yellow {
+    color: #A29C87
+}
+.text-xs {
+    font-size: 1.2rem;
+}
+.text-sm {
+    font-size: 1.4rem;
+}

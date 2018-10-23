@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Create-account-Member---Step-3-(V2)" transform="translate(-1024.000000, -258.000000)" stroke="#000000">
+            <g id="Group-5" transform="translate(586.000000, 142.000000)">
+                <g id="Group-4" transform="translate(4.000000, 87.000000)">
+                    <g id="Group" transform="translate(435.000000, 30.000000)">
+                        <polyline id="Stroke-3531" points="3.375 1.875 0.375 1.875 0.375 17.625 17.625 17.625 17.625 1.875 14.625 1.875"></polyline>
+                        <polygon id="Stroke-3532" points="5.625 3.375 3.375 3.375 3.375 0.375 5.625 0.375"></polygon>
+                        <polygon id="Stroke-3533" points="14.625 3.375 12.375 3.375 12.375 0.375 14.625 0.375"></polygon>
+                        <path d="M5.625,1.5 L12.375,1.5" id="Stroke-3534"></path>
+                        <path d="M0.375,5.25 L17.625,5.25" id="Stroke-3535"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

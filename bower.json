@@ -1,0 +1,18 @@
+{
+  "name": "my-webapp",
+  "private": true,
+  "dependencies": {
+    "Font-Awesome": "^5.0.10",
+    "slick-carousel": "^1.8.1",
+    "jquery-validation": "^1.17.0",
+    "bootstrap": "4",
+    "hammerjs": "^2.0.8",
+    "jquery-lazy": "^1.7.9",
+    "moment": "^2.22.2",
+    "fancybox": "^3.3.5"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1"
+  }
+}

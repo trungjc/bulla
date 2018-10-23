@@ -1,0 +1,82 @@
+
+
+.block-3-col {
+    .image {
+        height: 98px;
+        line-height: 98px;
+        img {
+            max-width: 78px;
+        }
+    }
+    @include media-breakpoint-down(md) {
+        .col-xs-12 {
+            & + .col-xs-12 {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .app-panel-bottom {
+        .btn {
+            min-width: 90px!important;
+        }
+    }
+}
+@include media-breakpoint-only(md) {
+    .col-md-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+.visible-mobile {
+    display: none!important;
+}
+.radio-group.d-flex {
+    flex-wrap: wrap;
+    .radio {
+        width: 50%;
+        margin: 0 0 20px;
+        @include media-breakpoint-down(md) {
+            width: 100%;
+        }
+    }
+}
+@include media-breakpoint-down(md) {
+
+    .hidden-xs {
+        display: none!important;
+    }
+    .visible-mobile {
+        display: block!important;
+    }
+    .img-404 {
+        max-width: 200px;
+    }
+
+    .md-block
+    {
+        display: block;
+    }
+    .card.app-card.ml-5 {
+        margin: 30px 0  0!important;
+    }
+    .pull-right,.pull-left {
+        float: none;
+    }
+    .card.app-card .card-body {
+        padding: 1.5rem
+    }
+    .result-text {
+        margin-bottom: 20px;
+    }
+    .form-control ,input{
+        font-size: initial!important;
+    }
+}
+
+
+
+
