@@ -16,20 +16,26 @@
 
 
 html {
-    font-size:62.5%;
+    font-size: 62.5%;
 }
 
 body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family: $font-family-base;
-    font-size: $font-size-base;
-    border:10px solid white;
+    background-color: #fffcf7;
+    color: #0f4876;
+    font-size: 15px;
+    font-family: 'gotham',sans-serif;
+    font-weight: 400;
 
+    img {
+        max-width: 100%;
+        display: inline-block;
+    }
 }
 
 
-h1,h2,h3{
+h1, h2, h3 {
     font-family: $headings-font-family;
 }
 
@@ -41,19 +47,23 @@ h2 {
     font-size: 3.8rem;
     letter-spacing: -1px;
 }
+
 h3 {
     font-size: 2.8rem;
 }
+
 h5 {
     font-size: 1.6rem;
+
     &.title {
         font-size: 1.8rem;
     }
 }
+
 h6 {
     font-size: 1.4rem;
-
 }
+
 img {
     max-width: 100%;
 }
@@ -71,8 +81,8 @@ img {
 }
 
 .clearfix {
-    &:after,&:before {
-        content:"";
+    &:after, &:before {
+        content: "";
         display: table;
         clear: both;
     }
@@ -81,28 +91,162 @@ img {
 .no-padding-top {
     padding-top: 0;
 }
+
 @include media-breakpoint-up(lg) {
     .container-fluid {
         padding: 0 25px;
     }
 }
+
 *[routerlink] {
     cursor: pointer;
     outline: none;
 }
+
 .link {
     cursor: pointer;
 }
+
 .mute {
     font-size: 1.2rem;
-   
 }
+
 .mute-yellow {
-    color: #A29C87
+    color: #A29C87;
 }
+
 .text-xs {
     font-size: 1.2rem;
 }
+
 .text-sm {
     font-size: 1.4rem;
+}
+
+.section-title {
+    font-size: 34px;
+    margin: 60px 0 20px 0;
+    text-align: center;
+    font-family: 'gotham',sans-serif;
+    font-weight: 700;
+     @include media-breakpoint-down(lg) {
+         margin: 15px 0 10px 0;
+    }
+    a {
+        color: #0f4876;
+        text-decoration: none;
+
+        &:hover {
+            color: #099abe;
+        }
+    }
+}
+
+a {
+    transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.slick-arrow {
+    position: absolute;
+    top: 45%;
+    z-index: 9;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    overflow: hidden;
+    line-height: 0;
+    text-align: center;
+    outline: 0;
+    width: 30px;
+    height: 80px;
+    text-indent: -9999999px;
+    background-color: transparent;
+    cursor: pointer;
+
+    @include media-breakpoint-down(lg) {
+        top: 30%;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 70px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    &.slick-next {
+        right: 0;
+
+        &:after {
+            background-image: url('../images/right-arrow.png');
+        }
+
+        &:hover {
+            &:after {
+                background-image: url('../images/right-arrow-hover.png');
+            }
+        }
+    }
+
+    &.slick-prev {
+        left: 0;
+
+        &:after {
+            background-image: url('../images/left-arrow.png');
+        }
+
+        &:hover {
+            &:after {
+                background-image: url('../images/left-arrow-hover.png');
+            }
+        }
+    }
+}
+
+main {
+    padding-top: 150px;
+
+    @include media-breakpoint-down(lg) {
+        padding-top: 75px;
+    }
+}
+
+section {
+    padding-bottom: 60px;
+
+    @include media-breakpoint-down(lg) {
+        padding-bottom: 15px;
+    }
+}
+
+.primary-btn {
+    display: inline-block;
+    background-color: #099abe;
+    text-shadow: none;
+    color: #fff;
+    width: 240px;
+    background-image: -webkit-linear-gradient(top, #169bbf 0, #169bbf 100%);
+    background-image: -o-linear-gradient(top, #169bbf 0, #169bbf 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#169bbf), to(#169bbf));
+    background-image: linear-gradient(to bottom, #169bbf 0, #169bbf 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#169bbf', endColorstr='#169bbf', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    background-repeat: repeat-x;
+    border: none;
+    font-size: 20px;
+    margin: auto;
+    display: inline-block;
+    margin-top: 30px;
+    line-height: 2;
+    padding: 8px 36px;
+    cursor: pointer;
+    font-weight: 500;
+
+    &:hover {
+        color: #fff;
+        text-decoration: none;
+        opacity: 0.8;
+    }
 }

@@ -2,6 +2,7 @@
 
 @import "variables";
 @import "bootstrap-sass/scss/bootstrap";
+@import "fonts";
 //@import "Font-Awesome/css/fontawesome-all.css";
 @import "mixins";
 
@@ -11,3 +12,5 @@
 @import "navbar";
 @import "components";
 
+/*page component*/
+@import "page/home";

@@ -7,7 +7,7 @@
     "babel-core": "^6.4.0",
     "babel-preset-es2015": "^6.3.13",
     "babel-register": "^6.5.2",
-    "browser-sync": "^2.2.1",
+    "browser-sync": "^2.26.3",
     "del": "^2.2.0",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.0.1",
@@ -49,6 +49,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.1.0",
     "cocoen": "^2.0.5",
+    "gulp-install": "^1.1.0",
     "jquery-images-compare": "^0.2.4"
   }
 }

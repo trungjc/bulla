@@ -1,0 +1,246 @@
+﻿.bg-prallax {
+    height: 600px;
+
+    img {
+        display: none;
+    }
+
+    &.party {
+        background: transparent url(../images/bg_1.jpg) repeat fixed 50% 50%/cover;
+    }
+
+    &.trunk {
+        background: transparent url(../images/bg_2.jpg) repeat fixed 50% 50%/cover;
+    }
+
+    &.cake {
+        background: transparent url(../images/bg_3.jpg) repeat fixed 50% 50%/cover;
+    }
+
+    &.family {
+        background: transparent url(../images/bg_4.jpg) repeat fixed 50% 50%/cover;
+    }
+
+    @include media-breakpoint-down(lg) {
+        height: auto;
+        background-image: none !important;
+
+        img {
+            display: block;
+        }
+    }
+}
+
+.product {
+    .list-product {
+        > div {
+            padding: 0;
+            overflow: hidden;
+            cursor: pointer;
+
+            &:nth-child(2n+1) {
+                background-color: #7fccde;
+            }
+
+            &:nth-child(2n) {
+                background-color: #bfe4ee;
+            }
+
+            img {
+                transform: matrix3d(1, 0.000174533, 0, 0, -0.000174533, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0.1, 1);
+                transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+            }
+
+            h4 {
+                opacity: 0;
+                transform: matrix(1, 0, 0, 1, 0, 0);
+                text-align: left;
+                font-size: 23px;
+                position: absolute;
+                font-weight: 500;
+                left: 0px;
+                top: 0px;
+                line-height: 25px;
+            }
+
+            &:hover {
+                img {
+                    transform: translate(55%, 0) matrix3d(1, 0.000174533, 0, 0, -0.000174533, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0.1, 1);
+                }
+
+                h4 {
+                    opacity: 1;
+                    transform: matrix(1, 0, 0, 1, 78.5, 134);
+                }
+            }
+        }
+    }
+}
+
+.sign-up {
+    height: 160px;
+    background: transparent url(../images/dollop-bg.jpg) repeat fixed 50% 10%/cover;
+}
+
+.story {
+    @include media-breakpoint-down(lg) {
+        padding: 15px;
+    }
+
+    .content {
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: center;
+
+        .nav-tabs {
+            text-align: center;
+            border: none;
+            margin-bottom: 25px;
+
+            li {
+                display: inline-block;
+                width: 33.3333%;
+                background-color: #fff;
+
+                @include media-breakpoint-down(lg) {
+                    width: 100%;
+                    margin-bottom: 5px;
+                }
+
+                a {
+                    padding: 10px 15px;
+                    display: block;
+                    color: #0f4876;
+                    text-decoration: none !important;
+                }
+
+                &:hover {
+                    background-color: #ededed;
+                }
+
+                &.active {
+                    a {
+                        color: #099abe;
+                    }
+                }
+            }
+        }
+
+        p {
+            line-height: 16px;
+        }
+    }
+}
+
+.recipe {
+    .recipe-list {
+        > div {
+            position: relative;
+
+            a {
+                display: block;
+
+                .overlay-txt {
+                    overflow: hidden;
+                    text-align: center;
+                    margin: auto;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    padding: 0 40px;
+                    margin-top: 0px;
+                    height: 100%;
+                    background-color: rgba(255, 255, 255, 0.8);
+                    opacity: 0;
+                    transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+                    padding-top: 17%;
+
+                    h3 {
+                        font-size: 15px;
+                        color: #0f4876;
+                        font-weight: 600;
+                    }
+                }
+
+                &:hover {
+                    .overlay-txt {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.service {
+    .content {
+        max-width: 700px;
+        text-align: center;
+        padding-bottom: 25px;
+        padding-top: 5px;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+
+    .href-link {
+        color: #099abe;
+        font-weight: 600;
+    }
+}
+
+.sign-up {
+     @include media-breakpoint-down(lg) {
+         padding:15px;
+     }
+    .content {
+        max-width: 570px;
+        margin: auto;
+        overflow: hidden;
+        padding-top: 60px;
+
+        input {
+            height: 44px;
+            width: calc(100% - 115px);
+            float: left;
+        }
+
+        button {
+            float: right;
+            width: 85px;
+            margin: 0;
+            border-radius: 5px;
+            text-align: center;
+            padding: 2px;
+        }
+    }
+}
+
+.join-us {
+    h4 {
+        color: #099abe;
+        margin: 40px 0 20px;
+        padding-bottom: 9px;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 0;
+        text-align: center;
+
+        li {
+            width: 20%;
+            display: inline-block;
+
+            a {
+                &:hover {
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+}
