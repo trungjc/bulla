@@ -52,6 +52,9 @@ var app = {
             //add class menu
             $('#mobile_menu').addClass('collapse');
         }
+        else {
+            $('#mobile_menu').removeClass('collapse');
+        }
     },
     initEqualHeight: function () {
         if (isMobileScreen()) return;
@@ -111,6 +114,16 @@ $(document).ready(function () {
     });
 
     $(window).scroll(function () {
+        let winWidth = window.innerWidth;
+        if (winWidth > 1024) {
+            if ($(window).scrollTop() > 200) {
+                $('header').addClass('sticky-header');
+            }
+            else {
+                $('header').removeClass('sticky-header');
+            }
+        }
+        
     });
 });
 

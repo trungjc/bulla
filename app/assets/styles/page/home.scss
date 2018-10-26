@@ -52,6 +52,16 @@
                 background-color: #bfe4ee;
             }
 
+            &:nth-child(6),
+            &:nth-child(8) {
+                background-color: #7fccde;
+            }
+
+            &:nth-child(5),
+            &:nth-child(7) {
+                background-color: #bfe4ee;
+            }
+
             img {
                 transform: matrix3d(1, 0.000174533, 0, 0, -0.000174533, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0.1, 1);
                 transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
@@ -117,7 +127,6 @@
                 a {
                     padding: 10px 15px;
                     display: block;
-                    color: $primary-color;
                     text-decoration: none !important;
                 }
 
@@ -165,7 +174,6 @@
 
                     h3 {
                         font-size: 1.5rem;
-                        color: $primary-color;
                         font-weight: 600;
                     }
                 }
@@ -192,7 +200,11 @@
 
     .href-link {
         color: $primary-color-active;
-        font-weight: 600;
+        font-weight: 900;
+
+        &:hover {
+            text-decoration: underline !important;
+        }
     }
 }
 
@@ -211,6 +223,8 @@
             height: 44px;
             width: calc(100% - 115px);
             float: left;
+            border-radius:4px;
+            padding:10px 15px;
         }
 
         button {
@@ -218,7 +232,9 @@
             width: 85px;
             margin: 0;
             border-radius: 5px;
-            padding: 2px;
+            padding: 7px;
+            font-weight:400;
+            font-size:1.4rem;
         }
     }
 }
@@ -227,12 +243,15 @@
     padding-top: 0;
 
     .news-item {
-        position:relative;
+        position: relative;
+
         .item {
             padding: 0 15px;
+
             a {
                 display: block;
-                position:relative;
+                position: relative;
+
                 .overlay-txt {
                     overflow: hidden;
                     text-align: center;
@@ -246,15 +265,15 @@
                     height: 100%;
                     background-color: rgba(22, 155, 191, 0.7);
                     opacity: 0;
-                    @include transition(all 0.3s cubic-bezier(0.4, 0, 1, 1));                    
+                    @include transition(all 0.3s cubic-bezier(0.4, 0, 1, 1));
 
                     h3 {
                         font-size: 1.5rem;
                         color: $white;
                         font-weight: 900;
-                        position:absolute;
-                        top:50%;
-                        left:50%;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
                         @include translate2D(-50%,-50%);
                     }
                 }
@@ -269,18 +288,18 @@
     }
 
     .slick-arrow.slick-next {
-        right: 15px;
+        right: 20px;
     }
 
     .slick-arrow.slick-prev {
-        left: 15px;
+        left: 20px;
     }
 }
 
 .join-us {
     h4 {
         color: $primary-color-active;
-        margin: 40px 0 20px;
+        margin: 0px 0 20px 0;
         padding-bottom: 9px;
         font-size: 1.5rem;
         text-align: center;

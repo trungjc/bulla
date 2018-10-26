@@ -16,7 +16,7 @@ footer {
             margin-bottom: 10px;
 
             a {
-                font-weight: 600;
+                font-weight: 900;
                 font-size: 1.7rem;
             }
         }
@@ -25,15 +25,14 @@ footer {
     .locations {
         h3 {
             font-size: $font-size-base;
-            font-weight: 600;
+            font-weight: 900;
             margin-top: 0px;
         }
 
         p {
             font-size: 1.2rem;
             line-height: 25px;
-            color: $primary-color;
-            font-weight: 500;
+            font-weight: 400;
         }
     }
 
@@ -47,22 +46,28 @@ footer {
         }
 
         h3 {
-             font-size: $font-size-base;
-            font-weight: 600;
+            font-size: $font-size-base;
+            font-weight: 900;
             margin-top: 0px;
+            margin-bottom: 10px;
         }
 
         ul {
-            margin-top: 5px;
+            font-size: 0;
 
             li {
                 display: inline-block;
                 width: 30px;
-                margin: 0 3px;
+                margin-left: 8px;
+                margin-bottom: 0;
             }
         }
 
         .link-rapper {
+            float: right;
+            margin-top: 18px;
+            width: 100%;
+
             a {
                 font-size: 1.1rem;
                 font-weight: 400;
@@ -76,7 +81,5 @@ footer {
         .f-logo {
             display: none;
         }
-
-        
     }
 }
