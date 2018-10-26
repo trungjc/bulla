@@ -21,13 +21,19 @@
         background: transparent url(../images/bg_4.jpg) repeat fixed 50% 50%/cover;
     }
 
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(md) {
         height: auto;
         background-image: none !important;
 
         img {
             display: block;
         }
+    }
+}
+
+.banner {
+    .container {
+        padding: 0;
     }
 }
 
@@ -55,7 +61,7 @@
                 opacity: 0;
                 transform: matrix(1, 0, 0, 1, 0, 0);
                 text-align: left;
-                font-size: 23px;
+                font-size: 2.3rem;
                 position: absolute;
                 font-weight: 500;
                 left: 0px;
@@ -65,12 +71,12 @@
 
             &:hover {
                 img {
-                    transform: translate(55%, 0) matrix3d(1, 0.000174533, 0, 0, -0.000174533, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0.1, 1);
+                    transform: translate(60%, 0) matrix3d(1, 0.000174533, 0, 0, -0.000174533, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0.1, 1);
                 }
 
                 h4 {
                     opacity: 1;
-                    transform: matrix(1, 0, 0, 1, 78.5, 134);
+                    transform: matrix(1, 0, 0, 1, 32.5, 134);
                 }
             }
         }
@@ -80,10 +86,11 @@
 .sign-up {
     height: 160px;
     background: transparent url(../images/dollop-bg.jpg) repeat fixed 50% 10%/cover;
+    padding: 0;
 }
 
 .story {
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(md) {
         padding: 15px;
     }
 
@@ -100,9 +107,9 @@
             li {
                 display: inline-block;
                 width: 33.3333%;
-                background-color: #fff;
+                background-color: $white;
 
-                @include media-breakpoint-down(lg) {
+                @include media-breakpoint-down(md) {
                     width: 100%;
                     margin-bottom: 5px;
                 }
@@ -110,7 +117,7 @@
                 a {
                     padding: 10px 15px;
                     display: block;
-                    color: #0f4876;
+                    color: $primary-color;
                     text-decoration: none !important;
                 }
 
@@ -120,7 +127,7 @@
 
                 &.active {
                     a {
-                        color: #099abe;
+                        color: $primary-color-active;
                     }
                 }
             }
@@ -157,8 +164,8 @@
                     padding-top: 17%;
 
                     h3 {
-                        font-size: 15px;
-                        color: #0f4876;
+                        font-size: 1.5rem;
+                        color: $primary-color;
                         font-weight: 600;
                     }
                 }
@@ -184,15 +191,16 @@
     }
 
     .href-link {
-        color: #099abe;
+        color: $primary-color-active;
         font-weight: 600;
     }
 }
 
 .sign-up {
-     @include media-breakpoint-down(lg) {
-         padding:15px;
-     }
+    @include media-breakpoint-down(md) {
+        padding: 15px;
+    }
+
     .content {
         max-width: 570px;
         margin: auto;
@@ -210,18 +218,71 @@
             width: 85px;
             margin: 0;
             border-radius: 5px;
-            text-align: center;
             padding: 2px;
         }
     }
 }
 
+.what-news {
+    padding-top: 0;
+
+    .news-item {
+        position:relative;
+        .item {
+            padding: 0 15px;
+            a {
+                display: block;
+                position:relative;
+                .overlay-txt {
+                    overflow: hidden;
+                    text-align: center;
+                    margin: auto;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    padding: 0 40px;
+                    margin-top: 0px;
+                    height: 100%;
+                    background-color: rgba(22, 155, 191, 0.7);
+                    opacity: 0;
+                    @include transition(all 0.3s cubic-bezier(0.4, 0, 1, 1));                    
+
+                    h3 {
+                        font-size: 1.5rem;
+                        color: $white;
+                        font-weight: 900;
+                        position:absolute;
+                        top:50%;
+                        left:50%;
+                        @include translate2D(-50%,-50%);
+                    }
+                }
+
+                &:hover {
+                    .overlay-txt {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    .slick-arrow.slick-next {
+        right: 15px;
+    }
+
+    .slick-arrow.slick-prev {
+        left: 15px;
+    }
+}
+
 .join-us {
     h4 {
-        color: #099abe;
+        color: $primary-color-active;
         margin: 40px 0 20px;
         padding-bottom: 9px;
-        font-size: 15px;
+        font-size: 1.5rem;
         text-align: center;
     }
 

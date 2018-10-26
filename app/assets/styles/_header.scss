@@ -5,9 +5,9 @@ header {
     top: 0;
     left: 0;
     z-index: 999;
-    background-color: #fffcf7;
-    transition: height 0.3s;
-    border-bottom: 1px solid #fffcf7;
+    background-color: $body-color;    
+    @include transition(height 0.3s);
+    border-bottom: 1px solid $body-color;
 
     .mb-btn {
         display: none;
@@ -29,20 +29,15 @@ header {
             a {
                 line-height: 150px;
                 margin-left: 20px;
-                color: #0f4876;
-                font-weight: 700;
-                font-size: 16px;
-                transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+                font-weight: 900;
+                font-size: 1.6rem;
                 text-decoration: none;
-
-                &:hover {
-                    transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
-                }
+                padding: 0;
             }
         }
     }
 
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(md) {
         height: auto;
 
         .mb-btn {
@@ -56,23 +51,18 @@ header {
             width: 35px;
             cursor: pointer;
             z-index: 100;
-            transition: opacity .25s ease;
-            -webkit-transition: all 0.3s;
-            -moz-transition: all 0.3s;
-            -ms-transition: all 0.3s;
-            -o-transition: all 0.3s;
-            transition: all 0.3s;
+            @include transition(all 0.3s);
             background-color: transparent;
 
             span {
-                background: #0f4876;
+                background: $primary-color;
                 border: none;
                 height: 5px;
                 width: 100%;
                 position: absolute;
                 top: 0;
                 left: 0;
-                transition: all .35s ease;
+                @include transition(all .35s ease);
                 cursor: pointer;
 
                 &:nth-of-type(2) {
@@ -118,10 +108,10 @@ header {
                 a {
                     display: block;
                     position: relative;
-                    color: #0f4876;
+                    color: $primary-color;
                     text-decoration: none;
                     overflow: hidden;
-                    font-size: 28px;
+                    font-size: 2.8rem;
                     line-height: 70px;
                     padding: 0;
                     margin: 0;

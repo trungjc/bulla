@@ -31,8 +31,9 @@ $yellow:  #ffc107 !default;
 $green:   #28a745 !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
-
-
+$primary-color: #0f4876 !default;
+$primary-color-active: #099abe !default;
+$body-color:#fffcf7 !default;
 // Fonts
 //
 // Font, line-height, and color for body text, headings, and more.
@@ -40,10 +41,10 @@ $cyan:    #17a2b8 !default;
 // stylelint-disable value-keyword-case
 $font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-family-base:            $font-family-sans-serif !default;
+$font-family-base:            'gotham',sans-serif !default;
 // stylelint-enable value-keyword-case
 
-$font-size-base:              1.6rem !default; // Assumes the browser default, typically `16px`
+$font-size-base:              1.5rem !default; // Assumes the browser default, typically `16px`
 $font-size-lg:                ($font-size-base * 1.25) !default;
 $font-size-sm:                ($font-size-base * .875) !default;
 

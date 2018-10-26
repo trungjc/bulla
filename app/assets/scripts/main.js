@@ -21,7 +21,7 @@ var app = {
         //    //  return '<a><img src="' + thumb + '"></a>'
         //    //}
         //});
-        $('.slick-banner').slick({
+        $('#slickBanner').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
             dots: false,
@@ -32,9 +32,21 @@ var app = {
             slidesToScroll: 2,
             dots: false,
             arrows: true,
+            infinite: false,
+            responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    dots: false,
+                    arrows: true,
+                    infinite: false,
+                }
+            }]
         });
     },
-    mobile:function(){
+    mobile: function () {
         let winWidth = window.innerWidth;
         if (winWidth < 1024) {
             //add class menu

@@ -22,11 +22,11 @@ html {
 body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #fffcf7;
-    color: #0f4876;
-    font-size: 15px;
-    font-family: 'gotham',sans-serif;
-    font-weight: 400;
+    background-color: $body-color;
+    color: $primary-color;
+    font-size: $font-size-base;
+    font-family: $font-family-base;
+    font-weight: $font-weight-normal;
 
     img {
         max-width: 100%;
@@ -124,26 +124,24 @@ img {
 }
 
 .section-title {
-    font-size: 34px;
-    margin: 60px 0 20px 0;
+    font-size: 3.4rem;
+    margin: 0 0 30px 0;
     text-align: center;
-    font-family: 'gotham',sans-serif;
-    font-weight: 700;
-     @include media-breakpoint-down(lg) {
-         margin: 15px 0 10px 0;
-    }
-    a {
-        color: #0f4876;
-        text-decoration: none;
+    font-weight: 900;
 
-        &:hover {
-            color: #099abe;
-        }
+    @include media-breakpoint-down(md) {
+        margin: 0 0 15px 0;
     }
 }
 
 a {
     transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+    color: $primary-color;
+    text-decoration: none !important;
+
+    &:hover {
+        color: $primary-color-active;
+    }
 }
 
 .slick-arrow {
@@ -163,7 +161,7 @@ a {
     background-color: transparent;
     cursor: pointer;
 
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(md) {
         top: 30%;
     }
 
@@ -206,26 +204,25 @@ a {
 }
 
 main {
-    padding-top: 150px;
+    padding-top: 90px;
 
-    @include media-breakpoint-down(lg) {
-        padding-top: 75px;
+    @include media-breakpoint-down(md) {
+        padding-top: 45px;
     }
 }
 
 section {
-    padding-bottom: 60px;
+    padding: 60px 0;
 
-    @include media-breakpoint-down(lg) {
-        padding-bottom: 15px;
+    @include media-breakpoint-down(md) {
+        padding: 15px 0;
     }
 }
 
 .primary-btn {
-    display: inline-block;
-    background-color: #099abe;
+    background-color: $primary-color-active;
     text-shadow: none;
-    color: #fff;
+    color: $white;
     width: 240px;
     background-image: -webkit-linear-gradient(top, #169bbf 0, #169bbf 100%);
     background-image: -o-linear-gradient(top, #169bbf 0, #169bbf 100%);
@@ -234,10 +231,7 @@ section {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#169bbf', endColorstr='#169bbf', GradientType=0);
     filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
     background-repeat: repeat-x;
-    border: none;
-    font-size: 20px;
-    margin: auto;
-    display: inline-block;
+    font-size: 2rem;
     margin-top: 30px;
     line-height: 2;
     padding: 8px 36px;
@@ -245,7 +239,7 @@ section {
     font-weight: 500;
 
     &:hover {
-        color: #fff;
+        color: $white;
         text-decoration: none;
         opacity: 0.8;
     }

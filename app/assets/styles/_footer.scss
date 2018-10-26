@@ -1,5 +1,5 @@
 footer {
-    background-color: #fff;
+    background-color: $white;
     padding: 40px 0;
 
     .container {
@@ -16,35 +16,24 @@ footer {
             margin-bottom: 10px;
 
             a {
-                color: #0f4876;
-                text-decoration: none;
                 font-weight: 600;
-                font-size: 17px;
-
-                &:hover {
-                    color: #099abe;
-                    text-decoration: none;
-                }
+                font-size: 1.7rem;
             }
         }
     }
 
     .locations {
         h3 {
-            font-size: 15px;
+            font-size: $font-size-base;
             font-weight: 600;
             margin-top: 0px;
         }
 
         p {
-            font-size: 12px;
+            font-size: 1.2rem;
             line-height: 25px;
-            color: #0f4876;
+            color: $primary-color;
             font-weight: 500;
-
-            a {
-                color: #0f4876;
-            }
         }
     }
 
@@ -52,13 +41,13 @@ footer {
         text-align: right;
         float: right;
 
-        @include media-breakpoint-down(lg) {
+        @include media-breakpoint-down(md) {
             float: left;
             text-align: left;
         }
 
         h3 {
-            font-size: 15px;
+             font-size: $font-size-base;
             font-weight: 600;
             margin-top: 0px;
         }
@@ -75,14 +64,13 @@ footer {
 
         .link-rapper {
             a {
-                color: #0f4876;
-                font-size: 11px;
+                font-size: 1.1rem;
                 font-weight: 400;
             }
         }
     }
 
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(md) {
         padding: 15px;
 
         .f-logo {
