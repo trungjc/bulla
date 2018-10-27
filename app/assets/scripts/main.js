@@ -69,7 +69,7 @@ var app = {
                     if ($(this).is(':visible') === true) {
                         if ($(this).outerHeight() > currentTallest) {
                             currentTallest = $(this).outerHeight();
-                        }                        
+                        }
                     }
                 });
                 $(obj).css('min-height', currentTallest);
@@ -77,41 +77,41 @@ var app = {
         }
     },
     equalHeightByRow: function (obj, notRunMobile) {
-    var widthTarget = 0;
-    if ($(obj).length) {
-        $(obj).height('auto');
-        widthTarget = notRunMobile === true ? 768 : 0;
-        if ($(window).width() >= widthTarget) {
-            var currentTallest = 0,
-              currentRowStart = 0,
-              rowDivs = [],
-              currentDiv = 0,
-              $el,
-              topPosition = 0;
-            $(obj).each(function () {
-                if ($(this).is(':visible') === true) {
-                    $el = $(this);
-                    topPosition = $el.offset().top;
-                    if (currentRowStart !== topPosition) {
+        var widthTarget = 0;
+        if ($(obj).length) {
+            $(obj).height('auto');
+            widthTarget = notRunMobile === true ? 768 : 0;
+            if ($(window).width() >= widthTarget) {
+                var currentTallest = 0,
+                  currentRowStart = 0,
+                  rowDivs = [],
+                  currentDiv = 0,
+                  $el,
+                  topPosition = 0;
+                $(obj).each(function () {
+                    if ($(this).is(':visible') === true) {
+                        $el = $(this);
+                        topPosition = $el.offset().top;
+                        if (currentRowStart !== topPosition) {
+                            for (currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
+                                rowDivs[currentDiv].css('min-height', currentTallest);
+                            }
+                            rowDivs = [];
+                            currentRowStart = topPosition;
+                            currentTallest = $el.innerHeight();
+                            rowDivs.push($el);
+                        } else {
+                            rowDivs.push($el);
+                            currentTallest = currentTallest < $el.innerHeight() ? $el.innerHeight() : currentTallest;
+                        }
                         for (currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
                             rowDivs[currentDiv].css('min-height', currentTallest);
                         }
-                        rowDivs = [];
-                        currentRowStart = topPosition;
-                        currentTallest = $el.innerHeight();
-                        rowDivs.push($el);
-                    } else {
-                        rowDivs.push($el);
-                        currentTallest = currentTallest < $el.innerHeight() ? $el.innerHeight() : currentTallest;
                     }
-                    for (currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
-                        rowDivs[currentDiv].css('min-height', currentTallest);
-                    }
-                }
-            });
+                });
+            }
         }
     }
-}
 };
 
 var product = {
@@ -139,7 +139,6 @@ var product = {
         });
     },
     slide: function () {
-        
         $('#relatedP').slick({
             slidesToShow: 4,
             slidesToScroll: 2,
@@ -160,13 +159,27 @@ var product = {
         });
     }
 };
-
+var recipes = {
+    slide: function () {
+        $('#rcpSlide').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: false,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 3000,
+        });
+    }
+}
 $(document).ready(function () {
     if ($('.js-home').length > 0) {
         app.init();
     };
     if ($('.js-products-detail').length > 0) {
         product.slide();
+    };
+    if ($('.js-recipe').length > 0) {
+        recipes.slide();
     };
     app.mobile();
     var resizeId;
@@ -188,7 +201,7 @@ $(document).ready(function () {
                 $('header').removeClass('sticky-header');
             }
         }
-        
+
     });
 });
 

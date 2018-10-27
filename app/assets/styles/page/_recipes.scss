@@ -1,0 +1,158 @@
+﻿.js-recipe-detail {
+    .wn-banner {
+        max-height: 565px;
+        overflow: hidden;
+    }
+}
+
+.receipe-banner {
+    .content {
+        position: relative;
+
+        h3 {
+            font-size: 6.1rem;
+            width: 50%;
+            right: 0;
+            left: auto;
+            text-align: right;
+            padding: 0 5%;
+        }
+    }
+}
+
+.recipe {
+    .container {
+        position: relative;
+    }
+
+    .filter-recipe {
+        background-color: #e7f5f8;
+        margin: 0;
+
+        a {
+            font-weight: 900;
+            padding: 17px 15px;
+            display: block;
+            text-align: center;
+
+            &:after {
+                content: none;
+            }
+        }
+
+        .dropdown-menu {
+            padding: 0;
+            left: -15px !important;
+            border: 0;
+
+            li {
+                background-color: #e7f5f8;
+
+                a {
+                    display: block;
+
+                    &:hover {
+                        background-color: #e8e8e8;
+                    }
+                }
+            }
+        }
+    }
+
+    .fa-search {
+        font-size: 3rem;
+        line-height: 56px;
+        cursor: pointer;
+        position: absolute;
+        right: 30px;
+        top: 0;
+    }
+
+    .recipe-list {
+        margin: 20px -10px;
+
+        > div {
+            padding: 0 10px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.recipe-detail {
+    padding-top: 0;
+
+    .re-title {
+        margin: 20px 0 50px 0;
+        background-color: #e7f5f8;
+        font-weight: 600;
+        line-height: 50px;
+    }
+
+    .icon {
+        text-align: right;
+        padding-right: 25%;
+    }
+
+    .share {
+        padding: 0;
+
+        span {
+            &:first-child {
+                margin-right: 15px;
+            }
+
+            &:last-child {
+                a {
+                    margin-right: 10px;
+
+                    img {
+                        height: 25px;
+                    }
+                }
+            }
+        }
+    }
+
+    .rp-content {
+        .c-left {
+            h3 {
+                font-size: 2.3rem;
+                font-weight: 900;
+                margin: 0;
+                color: $primary-color-active;
+            }
+
+            ul {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+
+                li {
+                    margin-bottom: 10px;
+                    color: $primary-color-active;
+                }
+            }
+        }
+
+        .c-right {
+            h2 {
+                margin: 0 0 35px 0;
+                font-size: 3.4rem;
+                font-weight: 900;
+            }
+
+            h3 {
+                font-size: 2.3rem;
+                font-weight: 900;
+                margin-bottom: 25px;
+            }
+
+            ol {
+                li {
+                    margin-bottom: 15px;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+}

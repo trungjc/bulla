@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
@@ -20,7 +20,7 @@
     <!-- endbuild -->
     <!--js-->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
-    <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script src="/bower_components/slick-carousel/slick/slick.js"></script>
     <script src="/bower_components/isotope-layout/dist/isotope.pkgd.js"></script>
     <!--page js-->
@@ -76,144 +76,92 @@
             </div>
         </nav>
     </header>
-    <main class="js-products-detail">
-        <section class="product-detail">
+    <main class="js-recipe-detail">
+        <section class="wn-banner">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <img src="assets/images/pd_1.png" />
-                    </div>
-                    <div class="col-lg-6 info">
-                        <h2>Bulla Creamy Classics Ice Cream Vanilla 2L</h2>
-                        <p>Bulla Creamy Classics Vanilla real ice cream is made with  fresh cream and full cream milk for a deliciously smooth and creamy texture. Traditionally crafted by Bulla for your enjoyment.</p>
-                        <h4>also available in:</h4>
-                        <ul class="avalable-in">
-                            <li>
-                                <a href="#">
-                                    <img src="assets/images/pd_2.png" />
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="assets/images/pd_2.png" />
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="assets/images/pd_2.png" />
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="assets/images/pd_2.png" />
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="assets/images/pd_2.png" />
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="share-product">
-                            <h4>share this product</h4>
-                            <span>
-                                <a href="#" target="_top" title="email"><img src="assets/images/email-icon.png" style="height:25px; margin-right:10px;"></a>
-                                <a href="#" target="_blank" title="facebook" class="facebook"><img src="assets/images/facebook-icon.png" style="height:25px; margin-right:10px;"></a>
-                                <a href="#" target="_blank" title="twitter"><img src="assets/images/twitter-icon.png" style="height:25px; margin-right:10px;"></a>
-                                <a href="#" target="_blank" title="pinterest"><img src="assets/images/pinterest-icon.png" style="height:28px; margin-right:10px;"></a>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="product-des col-lg-4">
-                        <h5 class="ng-binding">Description</h5>
-                        <p style="line-height: 24px;" ng-bind-html="feature.value | noHTML | newlines | unsafe" class="ng-binding">Real ice cream made with fresh milk and cream.</p>
-                    </div>
-                </div>
+                <img src="assets/images/rd_b_1.jpg" />
             </div>
         </section>
-        <section class="related-product">
+        <section class="recipe-detail">
             <div class="container">
-                <h2 class="section-title">related recipes</h2>
-                <div class="news-item" id="relatedP">
-                    <div class="item">
-                        <a href="#">
-                            <img src="assets/images/rp_1.jpg" />
-                            <h3>
-                                Raising the bar on indulgence
-                            </h3>
-                        </a>
+                <div class="row re-title">
+                    <div class="col-lg-8 icon">
+                        <img src="assets/images/knife-fork-icon.png" style="height:32px; margin-right:10px" alt="">
+                        <span>serves: 8</span>
                     </div>
-                    <div class="item">
-                        <a href="#">
-                            <img src="assets/images/rp_2.jpg" />
-                            <h3>
-                                Raising the bar on indulgence
-                            </h3>
-                        </a>
+                    <div class="col-lg-4 share">
+                        <span>share this recipe</span>
+                        <span>
+                            <a href="#" target="_top" title="email"><img src="assets/images/link-icon.png"></a>
+                            <a href="#" target="_top" title="email"><img src="assets/images/email-icon.png"></a>
+                            <a href="#" target="_blank" title="facebook" class="facebook"><img src="assets/images/facebook-icon.png"></a>
+                            <a href="#" target="_blank" title="twitter"><img src="assets/images/twitter-icon.png"></a>
+                            <a href="#" target="_blank" title="pinterest"><img src="assets/images/pinterest-icon.png"></a>
+                        </span>
                     </div>
-                    <div class="item">
-                        <a href="#">
-                            <img src="assets/images/rp_3.jpg" />
-                            <h3>
-                                Raising the bar on indulgence
-                            </h3>
-                        </a>
+                </div>
+                <div class="row rp-content">
+                    <div class="col-lg-4 c-left">
+                        <h3 class="title">Ingredients</h3>
+                        <ul class="ingredients-list">
+                            <li>
+                                <span>1</span>
+                                <span>pkt</span>
+                                <span>orange sanding sugar</span>
+                            </li>
+                            <li>
+                                <span>1</span>
+                                <span>tube</span>
+                                <span>green icing</span>
+                            </li>
+                            <li>
+                                <span>1</span>
+                                <span>tube</span>
+                                <span>black icing</span>
+                            </li>
+                            <li>
+                                <span>250</span>
+                                <span>g</span>
+                                <span>vanilla icing</span>
+                                <span>coloured orange</span>
+                            </li>
+                            <li>
+                                <span>orange food colouring</span>
+                            </li>
+                            <li>
+                                <span>1</span>
+                                <span>pkt</span>
+                                <span>black sanding sugar</span>
+                            </li>
+                            <li>
+                                <span>1</span>
+                                <span>tube</span>
+                                <span>black icing</span>
+                            </li>
+                            <li>
+                                <span>orange smarties,</span>
+                                <span>for eyes</span>
+                            </li>
+                            <li>
+                                <span>rope liquorice,</span>
+                                <span>for legs</span>
+                            </li>
+
+                        </ul>
                     </div>
-                    <div class="item">
-                        <a href="#">
-                            <img src="assets/images/rp_4.jpg" />
-                            <h3>
-                                Raising the bar on indulgence
+                    <div class="col-lg-8 c-right">
+                        <h2>Spooky Sangas</h2>
+                        <div class="method-wrapper">
+                            <h3 class="title">
+                                method
                             </h3>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="#">
-                            <img src="assets/images/rp_5.jpg" />
-                            <h3>
-                                Raising the bar on indulgence
-                            </h3>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="#">
-                            <img src="assets/images/rp_1.jpg" />
-                            <h3>
-                                Raising the bar on indulgence
-                            </h3>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="#">
-                            <img src="assets/images/rp_3.jpg" />
-                            <h3>
-                                Raising the bar on indulgence
-                            </h3>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="#">
-                            <img src="assets/images/rp_4.jpg" />
-                            <h3>
-                                Raising the bar on indulgence
-                            </h3>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="#">
-                            <img src="assets/images/rp_5.jpg" />
-                            <h3>
-                                Raising the bar on indulgence
-                            </h3>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="#">
-                            <img src="assets/images/rp_2.jpg" />
-                            <h3>
-                                Raising the bar on indulgence
-                            </h3>
-                        </a>
+                            <ol>
+                                <li>For the pumpkins, Spread top of sandwich with the orange icing, then dip sandwich in the orange sugar to coat icing. Roll sides of sandwich in sugar.</li>
+                                <li>Pipe on black stripes and then a stalk in green icing. Freeze until ready to serve.</li>
+                                <li>For the Spiders, Spread top of sandwich with the black icing. Dip into black sugar to coat icing and coat sides of sandwich in sugar.</li>
+                                <li>Using the same icing, attach 2 orange candies and dot with black to form eyes. Cut strings of liquorice and attach 6 for the spiders legs</li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
             </div>
