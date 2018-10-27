@@ -59,7 +59,7 @@ header {
                 &:hover {
                     .dropdown-menu {
                         visibility: visible;
-                          @include opacity(1);
+                        @include opacity(1);
                     }
                 }
             }
@@ -68,14 +68,15 @@ header {
 
     @include media-breakpoint-down(md) {
         height: auto;
+        border-bottom: 1px solid #169bc0;
 
         .mb-btn {
             outline: 0;
             border: 0;
             display: block;
             position: fixed;
-            top: 3%;
-            right: 2%;
+            top: 24px;
+            right: 15px;
             height: 27px;
             width: 35px;
             cursor: pointer;
@@ -106,7 +107,12 @@ header {
 
         .logo {
             max-width: 100px;
-            margin-top: 12px;
+            margin-top: 0;
+            line-height: 75px;
+
+            img {
+                margin-top: -10px;
+            }
         }
 
         #mobile_menu {

@@ -15,6 +15,10 @@ footer {
         li {
             margin-bottom: 10px;
 
+            @include media-breakpoint-down(md) {
+                margin-bottom: 0;
+            }
+
             a {
                 font-weight: 900;
                 font-size: 1.7rem;
@@ -23,10 +27,13 @@ footer {
     }
 
     .locations {
+
+
         h3 {
             font-size: $font-size-base;
             font-weight: 900;
             margin-top: 0px;
+            line-height: 16.5px;
         }
 
         p {
@@ -34,22 +41,31 @@ footer {
             line-height: 25px;
             font-weight: 400;
         }
+
+        @include media-breakpoint-down(md) {
+            padding: 25px 0;
+
+            h3 {
+                margin-bottom: 10px;
+            }
+
+            p {
+                line-height: 14px;
+                margin: 0;
+            }
+        }
     }
 
     .social-container {
         text-align: right;
         float: right;
 
-        @include media-breakpoint-down(md) {
-            float: left;
-            text-align: left;
-        }
-
         h3 {
             font-size: $font-size-base;
             font-weight: 900;
             margin-top: 0px;
             margin-bottom: 10px;
+            line-height: 16.5px;
         }
 
         ul {
@@ -73,10 +89,22 @@ footer {
                 font-weight: 400;
             }
         }
+
+        @include media-breakpoint-down(md) {
+            float: left;
+            text-align: left;
+
+            ul {
+                li {
+                    margin-left: 0;
+                    margin-right: 8px;
+                }
+            }
+        }
     }
 
     @include media-breakpoint-down(md) {
-        padding: 15px;
+        padding: 40px 15px;
 
         .f-logo {
             display: none;
