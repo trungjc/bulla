@@ -192,6 +192,7 @@ main {
 }
 
 section {
+    position: relative;
     padding: 60px 0;
 
     @include media-breakpoint-down(md) {

@@ -1,0 +1,109 @@
+﻿.wn-banner {
+    .container {
+        position: relative;
+    }
+
+    .row {
+        display: block;
+    }
+
+    h3 {
+        font-size: 7.1rem;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        @include translate(0,-50%);
+        font-weight: 900;
+        color: #fff;
+        padding: 20px 58px 10px 58px;
+
+        @include media-breakpoint-down(md) {
+            font-size: 4rem;
+        }
+    }
+}
+
+.wn-list-item {
+    padding-top: 0;
+
+    .container {
+        padding: 0 5px;
+
+        .row {
+            margin: 0 -5px;
+        }
+
+        .item {
+            padding: 5px;
+
+            a {
+                display: block;
+                padding: 10px;
+
+                img {
+                    @include transition(all 0.3s cubic-bezier(0.4, 0, 1, 1));
+                }
+
+                p {
+                    margin: 10px 0 15px 0;
+                    font-size: 1.3rem;
+                    color: $primary-color-active;
+                }
+
+                h3 {
+                    font-size: 1.6rem;
+                    min-height: 70px;
+                    font-weight: 900;
+                    line-height: 17.6px;
+
+                    @include media-breakpoint-down(md) {
+                        min-height: 51px;
+                    }
+                }
+
+                &:hover {
+                    img {
+                        opacity: 0.75;
+                    }
+                }
+            }
+
+            &:nth-child(2n+1) {
+                a {
+                    background-color: rgb(255, 248, 240);
+                }
+            }
+
+            &:nth-child(2n+2) {
+                a {
+                    background-color: rgb(237, 243, 252);
+                }
+            }
+
+            &:nth-child(2n+3) {
+                a {
+                    background-color: rgb(235, 244, 230);
+                }
+            }
+        }
+    }
+}
+
+.wn-detail-content {
+    padding-top: 0;
+
+    .row {
+        display: block;
+    }
+
+    h2 {
+        margin: 20px 0 10px 0;
+        font-size: 3.4rem;
+        font-weight: 900;
+    }
+
+    .news-dateline {
+        line-height: 16px;
+        color: $primary-color-active;
+    }
+}

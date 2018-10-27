@@ -6,7 +6,6 @@ var isMobileScreen = function () {
 var app = {
     init: function () {
         app.slider();
-        app.mobile();
     },
     slider: function () {
         //$('.slick-banne').slick({
@@ -59,51 +58,117 @@ var app = {
     initEqualHeight: function () {
         if (isMobileScreen()) return;
     },
-    equalHeightByRow: function (obj, notRunMobile) {
+    equalHeight: function (obj, notRunMobile) {
         var widthTarget = 0;
         if ($(obj).length) {
             $(obj).height('auto');
             widthTarget = notRunMobile === true ? 768 : 0;
             if ($(window).width() >= widthTarget) {
-                var currentTallest = 0,
-                  currentRowStart = 0,
-                  rowDivs = [],
-                  currentDiv = 0,
-                  $el,
-                  topPosition = 0;
+                var currentTallest = 0;
                 $(obj).each(function () {
                     if ($(this).is(':visible') === true) {
-                        $el = $(this);
-                        topPosition = $el.offset().top;
-                        if (currentRowStart !== topPosition) {
-                            for (currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
-                                rowDivs[currentDiv].css('min-height', currentTallest);
-                            }
-                            rowDivs = [];
-                            currentRowStart = topPosition;
-                            currentTallest = $el.innerHeight();
-                            rowDivs.push($el);
-                        } else {
-                            rowDivs.push($el);
-                            currentTallest = currentTallest < $el.innerHeight() ? $el.innerHeight() : currentTallest;
-                        }
+                        if ($(this).outerHeight() > currentTallest) {
+                            currentTallest = $(this).outerHeight();
+                        }                        
+                    }
+                });
+                $(obj).css('min-height', currentTallest);
+            }
+        }
+    },
+    equalHeightByRow: function (obj, notRunMobile) {
+    var widthTarget = 0;
+    if ($(obj).length) {
+        $(obj).height('auto');
+        widthTarget = notRunMobile === true ? 768 : 0;
+        if ($(window).width() >= widthTarget) {
+            var currentTallest = 0,
+              currentRowStart = 0,
+              rowDivs = [],
+              currentDiv = 0,
+              $el,
+              topPosition = 0;
+            $(obj).each(function () {
+                if ($(this).is(':visible') === true) {
+                    $el = $(this);
+                    topPosition = $el.offset().top;
+                    if (currentRowStart !== topPosition) {
                         for (currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
                             rowDivs[currentDiv].css('min-height', currentTallest);
                         }
+                        rowDivs = [];
+                        currentRowStart = topPosition;
+                        currentTallest = $el.innerHeight();
+                        rowDivs.push($el);
+                    } else {
+                        rowDivs.push($el);
+                        currentTallest = currentTallest < $el.innerHeight() ? $el.innerHeight() : currentTallest;
                     }
-                });
-            }
+                    for (currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
+                        rowDivs[currentDiv].css('min-height', currentTallest);
+                    }
+                }
+            });
         }
     }
-
-
-
-
+}
 };
 
+var product = {
+    init: function () {
+        product.filter()
+    },
+    filter: function () {
+        var $grid = $('.grid').isotope({
+            itemSelector: '.element-item',
+            layoutMode: 'fitRows',
+        });
+
+        // bind filter button click
+        $('#filters').on('click', 'button', function () {
+            var filterValue = $(this).attr('data-filter');
+            $grid.isotope({ filter: filterValue });
+        });
+        // change is-checked class on buttons
+        $('.button-group').each(function (i, buttonGroup) {
+            var $buttonGroup = $(buttonGroup);
+            $buttonGroup.on('click', 'button', function () {
+                $buttonGroup.find('.is-checked').removeClass('is-checked');
+                $(this).addClass('is-checked');
+            });
+        });
+    },
+    slide: function () {
+        
+        $('#relatedP').slick({
+            slidesToShow: 4,
+            slidesToScroll: 2,
+            dots: false,
+            arrows: true,
+            infinite: false,
+            responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    dots: false,
+                    arrows: true,
+                    infinite: false,
+                }
+            }]
+        });
+    }
+};
 
 $(document).ready(function () {
-    app.init();
+    if ($('.js-home').length > 0) {
+        app.init();
+    };
+    if ($('.js-products-detail').length > 0) {
+        product.slide();
+    };
+    app.mobile();
     var resizeId;
     $(window).resize(function () {
         clearTimeout(resizeId);
@@ -128,6 +193,11 @@ $(document).ready(function () {
 });
 
 $(window).on('load', function () {
+    if ($('.js-products').length > 0) {
+        product.init();
+        app.initEqualHeight()
+        app.equalHeight('.element-item')
+    }
 });
 
 

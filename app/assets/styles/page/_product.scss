@@ -1,0 +1,161 @@
+﻿.product-item {
+    .button-group {
+        @include border-radius(10px);
+        background-color: #ebebeb;
+        overflow: hidden;
+        padding: 18px 60px;
+        width: 65%;
+        margin: 0 auto 35px auto;
+
+        button {
+            font-size: 1.7rem;
+            background-color: transparent;
+            border: 0;
+            outline: 0;
+            padding: 0 10px;
+            border-right: 2px solid $primary-color-active;
+            font-weight: 900;
+            color: $buttontext;
+            cursor: pointer;
+
+            &:hover,
+            &.is-checked {
+                color: $primary-color-active;
+            }
+        }
+    }
+
+    .grid {
+        width: 100%;
+    }
+
+    .element-item {
+        position: relative;
+        width: 50%;
+        float: left;
+        border-bottom: 10px solid #ebebeb;
+        display: table;
+
+        a {
+            display: table;
+            width: 100%;
+
+            > div {
+                width: 50%;
+                display: table-cell;
+                vertical-align: middle;
+                padding: 10px;
+
+                h3 {
+                    font-size: 2.9rem;
+                }
+            }
+
+            &:hover {
+                background-color: $primary-color-active;
+
+                h3 {
+                    color: $body-bg-color;
+                }
+            }
+        }
+    }
+}
+
+.product-detail {
+    .info {
+        h2 {
+            font-size: 3.4rem;
+            font-weight: 900;
+            line-height: 37.4px;
+            margin: 20px 0 10px 0;
+        }
+
+        p {
+            line-height: 19px;
+        }
+
+        h4 {
+            font-size: 2.0rem;
+            font-weight: 900;
+            margin: 20px 0 10px 0;
+        }
+
+        .avalable-in {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            font-size: 0;
+
+            li {
+                display: inline-block;
+                padding: 0 10px 5px 0;
+                max-width: 90px;
+            }
+        }
+
+        .share-product {
+            h4 {
+                display: inline-block;
+            }
+
+            span {
+                display: inline-block;
+                margin: 15px 0 0 0;
+                padding: 0 0 0 20px;
+
+                a {
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+    }
+
+    .product-des {
+        margin: 40px 0 20px 0;
+
+        h5 {
+            font-size: 1.6rem;
+            margin: 4px 0;
+            font-weight: 900;
+        }
+
+        p {
+            line-height: 24px;
+        }
+    }
+}
+
+.related-product {
+    padding-top: 0;
+
+    .section-title {
+        text-align: left;
+        padding-left: 15px;
+    }
+
+    .news-item {
+        background-color: $primary-color-active;
+        padding: 30px;
+    }
+
+    .item {
+        padding: 0 10px;
+
+        h3 {
+            font-size: 2.4rem;
+            margin: 20px 0 0 0;
+            color: $body-bg-color;
+        }
+    }
+
+    .slick-arrow.slick-prev {
+        left: 0;
+    }
+
+    .slick-arrow.slick-next {
+        right: 0;
+    }
+}
