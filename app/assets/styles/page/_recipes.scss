@@ -34,7 +34,9 @@
             padding: 17px 15px;
             display: block;
             text-align: center;
-
+            &:hover {
+                text-decoration: none;
+            }
             &:after {
                 content: none;
             }

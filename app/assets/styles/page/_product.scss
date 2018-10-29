@@ -58,7 +58,9 @@
         a {
             display: table;
             width: 100%;
-
+            &:hover {
+                text-decoration: none;
+            }
             > div {
                 width: 50%;
                 display: table-cell;
@@ -72,6 +74,7 @@
 
                 h3 {
                     font-size: 2.9rem;
+                    font-weight: 900;
                 }
             }
 
@@ -172,6 +175,9 @@
     .news-item {
         background-color: $primary-color-active;
         padding: 30px;
+        a:hover {
+            text-decoration: none;
+        }
     }
 
     .item {
@@ -180,16 +186,17 @@
         h3 {
             font-size: 2.4rem;
             margin: 20px 0 0 0;
+            font-weight: bold;
             color: $body-bg-color;
         }
     }
 
     .slick-arrow.slick-prev {
-        left: 0;
+        left:5px;
     }
 
     .slick-arrow.slick-next {
-        right: 0;
+        right: 5px;
     }
 }
 
