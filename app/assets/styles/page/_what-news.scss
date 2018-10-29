@@ -21,6 +21,13 @@
             font-size: 4rem;
         }
     }
+
+    &.text-a-center {
+        h3 {
+            left: 50%;
+            @include translate(-50%,-50%);
+        }
+    }
 }
 
 .wn-list-item {

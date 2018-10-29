@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
@@ -20,7 +20,7 @@
     <!-- endbuild -->
     <!--js-->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
-    <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script src="/bower_components/slick-carousel/slick/slick.js"></script>
     <script src="/bower_components/isotope-layout/dist/isotope.pkgd.js"></script>
     <!--page js-->
@@ -89,193 +89,195 @@
             <div class="container">
                 <div class="row">
                     <div id="filters" class="button-group">
-                        <button class="button is-checked" data-filter="*">all</button>
-                        <button class="button" data-filter=".cream">cream</button>
-                        <button class="button" data-filter=".sour-cream">sour cream</button>
-                        <button class="button" data-filter=".cottage-cheese">cottage cheese</button>
-                        <button class="button" data-filter=".spreadable-feta">spreadable feta</button>
-                        <button class="button" data-filter=".bulla-real">bulla real dairy</button>
-                        <button class="button" data-filter=".creamy-classics">creamy classics</button>
-                        <button class="button" data-filter=".multipacks">multipacks</button>
-                        <button class="button" data-filter=".frozen-yoghurt">frozen yoghurt</button>
+                        <button class="button btn-filter-collpase is-checked" data-filter="*" data-toggle="collapse" data-target="#filter_collapse">all</button>
+                        <span id="filter_collapse">
+                            <button class="button" data-filter=".cream">cream</button>
+                            <button class="button" data-filter=".sour-cream">sour cream</button>
+                            <button class="button" data-filter=".cottage-cheese">cottage cheese</button>
+                            <button class="button" data-filter=".spreadable-feta">spreadable feta</button>
+                            <button class="button" data-filter=".bulla-real">bulla real dairy</button>
+                            <button class="button" data-filter=".creamy-classics">creamy classics</button>
+                            <button class="button" data-filter=".multipacks">multipacks</button>
+                            <button class="button" data-filter=".frozen-yoghurt">frozen yoghurt</button>
+                        </span>
                     </div>
                     <div class="grid clearfix">
                         <div class="element-item transition cream">
                             <a href="#">
-                                <div class="col-xs-6">
+                                <div class="col-md-6">
                                     <img src="assets/images/pr_1.png" />
                                 </div>
-                                <div class="col-xs-6">
+                                <div class="col-md-6">
                                     <h3>Bulla Creamy Classics Frozen Custard Classic 1L</h3>
                                 </div>
                             </a>
                         </div>
                         <div class="element-item cream multipacks">
                             <a href="#">
-                                <div class="col-xs-6">
+                                <div class="col-md-6">
                                     <img src="assets/images/pr_2.png" />
                                 </div>
-                                <div class="col-xs-6">
+                                <div class="col-md-6">
                                     <h3>Bulla Creamy Classics Frozen Custard Classic 1L</h3>
                                 </div>
                             </a>
                         </div>
                         <div class="element-item transition sour-cream">
                             <a href="#">
-                                <div class="col-xs-6">
+                                <div class="col-md-6">
                                     <img src="assets/images/pr_3.png" />
                                 </div>
-                                <div class="col-xs-6">
+                                <div class="col-md-6">
                                     <h3>Bulla Creamy Classics Frozen Custard Classic 1L</h3>
                                 </div>
                             </a>
                         </div>
                         <div class="element-item sour-cream">
                             <a href="#">
-                                <div class="col-xs-6">
+                                <div class="col-md-6">
                                     <img src="assets/images/pr_4.png" />
                                 </div>
-                                <div class="col-xs-6">
+                                <div class="col-md-6">
                                     <h3>Bulla Creamy Classics Frozen Custard Classic 1L</h3>
                                 </div>
                             </a>
                         </div>
                         <div class="element-item transition cottage-cheese multipacks">
                             <a href="#">
-                                <div class="col-xs-6">
+                                <div class="col-md-6">
                                     <img src="assets/images/pr_5.png" />
                                 </div>
-                                <div class="col-xs-6">
+                                <div class="col-md-6">
                                     <h3>Bulla Creamy Classics Frozen Custard Classic 1L</h3>
                                 </div>
                             </a>
                         </div>
                         <div class="element-item cottage-cheese cream">
                             <a href="#">
-                                <div class="col-xs-6">
+                                <div class="col-md-6">
                                     <img src="assets/images/pr_6.png" />
                                 </div>
-                                <div class="col-xs-6">
+                                <div class="col-md-6">
                                     <h3>Bulla Creamy Classics Frozen Custard Classic 1L</h3>
                                 </div>
                             </a>
                         </div>
                         <div class="element-item transition spreadable-feta">
                             <a href="#">
-                                <div class="col-xs-6">
+                                <div class="col-md-6">
                                     <img src="assets/images/pr_7.png" />
                                 </div>
-                                <div class="col-xs-6">
+                                <div class="col-md-6">
                                     <h3>Bulla Creamy Classics Frozen Custard Classic 1L</h3>
                                 </div>
                             </a>
                         </div>
                         <div class="element-item spreadable-feta">
                             <a href="#">
-                                <div class="col-xs-6">
+                                <div class="col-md-6">
                                     <img src="assets/images/pr_8.png" />
                                 </div>
-                                <div class="col-xs-6">
+                                <div class="col-md-6">
                                     <h3>Bulla Creamy Classics Frozen Custard Classic 1L</h3>
                                 </div>
                             </a>
                         </div>
                         <div class="element-item bulla-real cream">
                             <a href="#">
-                                <div class="col-xs-6">
+                                <div class="col-md-6">
                                     <img src="assets/images/pr_9.png" />
                                 </div>
-                                <div class="col-xs-6">
+                                <div class="col-md-6">
                                     <h3>Bulla Creamy Classics Frozen Custard Classic 1L</h3>
                                 </div>
                             </a>
                         </div>
                         <div class="element-item bulla-real">
                             <a href="#">
-                                <div class="col-xs-6">
+                                <div class="col-md-6">
                                     <img src="assets/images/pr_10.png" />
                                 </div>
-                                <div class="col-xs-6">
+                                <div class="col-md-6">
                                     <h3>Bulla Creamy Classics Frozen Custard Classic 1L</h3>
                                 </div>
                             </a>
                         </div>
                         <div class="element-item transition creamy-classics">
                             <a href="#">
-                                <div class="col-xs-6">
+                                <div class="col-md-6">
                                     <img src="assets/images/pr_11.png" />
                                 </div>
-                                <div class="col-xs-6">
+                                <div class="col-md-6">
                                     <h3>Bulla Creamy Classics Frozen Custard Classic 1L</h3>
                                 </div>
                             </a>
                         </div>
                         <div class="element-item creamy-classics">
                             <a href="#">
-                                <div class="col-xs-6">
+                                <div class="col-md-6">
                                     <img src="assets/images/pr_12.png" />
                                 </div>
-                                <div class="col-xs-6">
+                                <div class="col-md-6">
                                     <h3>Bulla Creamy Classics Frozen Custard Classic 1L</h3>
                                 </div>
                             </a>
                         </div>
                         <div class="element-item multipacks">
                             <a href="#">
-                                <div class="col-xs-6">
+                                <div class="col-md-6">
                                     <img src="assets/images/pr_13.png" />
                                 </div>
-                                <div class="col-xs-6">
+                                <div class="col-md-6">
                                     <h3>Bulla Creamy Classics Frozen Custard Classic 1L</h3>
                                 </div>
                             </a>
                         </div>
                         <div class="element-item multipacks cream">
                             <a href="#">
-                                <div class="col-xs-6">
+                                <div class="col-md-6">
                                     <img src="assets/images/pr_14.png" />
                                 </div>
-                                <div class="col-xs-6">
+                                <div class="col-md-6">
                                     <h3>Bulla Creamy Classics Frozen Custard Classic 1L</h3>
                                 </div>
                             </a>
                         </div>
                         <div class="element-item frozen-yoghurt">
                             <a href="#">
-                                <div class="col-xs-6">
+                                <div class="col-md-6">
                                     <img src="assets/images/pr_15.png" />
                                 </div>
-                                <div class="col-xs-6">
+                                <div class="col-md-6">
                                     <h3>Bulla Creamy Classics Frozen Custard Classic 1L</h3>
                                 </div>
                             </a>
                         </div>
                         <div class="element-item frozen-yoghurt">
                             <a href="#">
-                                <div class="col-xs-6">
+                                <div class="col-md-6">
                                     <img src="assets/images/pr_16.png" />
                                 </div>
-                                <div class="col-xs-6">
+                                <div class="col-md-6">
                                     <h3>Bulla Creamy Classics Frozen Custard Classic 1L</h3>
                                 </div>
                             </a>
                         </div>
                         <div class="element-item transition cream">
                             <a href="#">
-                                <div class="col-xs-6">
+                                <div class="col-md-6">
                                     <img src="assets/images/pr_17.png" />
                                 </div>
-                                <div class="col-xs-6">
+                                <div class="col-md-6">
                                     <h3>Bulla Creamy Classics Frozen Custard Classic 1L</h3>
                                 </div>
                             </a>
                         </div>
                         <div class="element-item sour-cream cream">
                             <a href="#">
-                                <div class="col-xs-6">
+                                <div class="col-md-6">
                                     <img src="assets/images/pr_18.png" />
                                 </div>
-                                <div class="col-xs-6">
+                                <div class="col-md-6">
                                     <h3>Bulla Creamy Classics Frozen Custard Classic 1L</h3>
                                 </div>
                             </a>

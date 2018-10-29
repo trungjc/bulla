@@ -16,6 +16,7 @@ body {
 
 h1, h2, h3 {
     font-family: $headings-font-family;
+    font-weight:900;
 }
 
 .title {
@@ -230,5 +231,12 @@ section {
     .col-xs-6 {
         flex: 0 0 50%;
         max-width: 50%;
+    }
+    .col-xs-4 {
+        flex: 0 0 33.33333333%;
+        max-width: 33.33333333%;
+    }
+    .row:not(.row-mobile){
+        display:block;
     }
 }

@@ -3,17 +3,17 @@
 @import "variables";
 @import "bootstrap-sass/scss/bootstrap";
 @import "fonts";
-//@import "Font-Awesome/css/fontawesome-all.css";
+@import "Font-Awesome/css/fontawesome-all.css";
 @import "mixins";
-
 @import "global";
 @import "header";
 @import "footer";
 @import "navbar";
 @import "components";
-
 /*page component*/
 @import "page/home";
 @import "page/what-news";
 @import "page/product";
 @import "page/recipes";
+@import "page/careers";
+@import "page/contact-us";

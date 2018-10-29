@@ -157,6 +157,16 @@ var product = {
                 }
             }]
         });
+    },
+    menuFilter: function () {
+        let winWidth = window.innerWidth;
+        if (winWidth < 1024) {
+            //add class menu
+            $('#filter_collapse').addClass('collapse');
+        }
+        else {
+            $('#filter_collapse').removeClass('collapse');
+        }
     }
 };
 var recipes = {
@@ -167,7 +177,7 @@ var recipes = {
             dots: false,
             arrows: false,
             autoplay: true,
-            autoplaySpeed: 3000,
+            autoplaySpeed: 2000,
         });
     }
 }
@@ -181,6 +191,9 @@ $(document).ready(function () {
     if ($('.js-recipe').length > 0) {
         recipes.slide();
     };
+    if ($('.js-products').length > 0) {
+        product.menuFilter();
+    }
     app.mobile();
     var resizeId;
     $(window).resize(function () {
@@ -189,6 +202,9 @@ $(document).ready(function () {
             app.initEqualHeight();
         });
         app.mobile();
+        if ($('.js-products').length > 0) {
+            product.menuFilter();
+        }
     });
 
     $(window).scroll(function () {
@@ -207,9 +223,9 @@ $(document).ready(function () {
 
 $(window).on('load', function () {
     if ($('.js-products').length > 0) {
-        product.init();
-        app.initEqualHeight()
-        app.equalHeight('.element-item')
+        // product.init();
+        app.initEqualHeight();
+        app.equalHeightByRow('.element-item > a');
     }
 });
 

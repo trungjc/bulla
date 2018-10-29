@@ -7,6 +7,13 @@
         width: 65%;
         margin: 0 auto 35px auto;
 
+        @include media-breakpoint-down(md) {
+            width: calc(100% - 30px );
+            text-align: center;
+            @include border-radius(0);
+            padding: 0;
+        }
+
         button {
             font-size: 1.7rem;
             background-color: transparent;
@@ -17,6 +24,13 @@
             font-weight: 900;
             color: $buttontext;
             cursor: pointer;
+
+            @include media-breakpoint-down(md) {
+                border: 0;
+                padding: 15px;
+                width: 100%;
+                display: block;
+            }
 
             &:hover,
             &.is-checked {
@@ -36,6 +50,11 @@
         border-bottom: 10px solid #ebebeb;
         display: table;
 
+        @include media-breakpoint-down(md) {
+            width: 100%;
+            padding: 15px;
+        }
+
         a {
             display: table;
             width: 100%;
@@ -45,6 +64,11 @@
                 display: table-cell;
                 vertical-align: middle;
                 padding: 10px;
+
+                @include media-breakpoint-down(md) {
+                    width: 100%;
+                    display: block;
+                }
 
                 h3 {
                     font-size: 2.9rem;
@@ -97,12 +121,21 @@
         .share-product {
             h4 {
                 display: inline-block;
+
+                @include media-breakpoint-down(md) {
+                    display: block;
+                }
             }
 
             span {
                 display: inline-block;
                 margin: 15px 0 0 0;
                 padding: 0 0 0 20px;
+
+                @include media-breakpoint-down(md) {
+                    padding: 0;
+                    margin: 0;
+                }
 
                 a {
                     &:hover {
@@ -157,5 +190,25 @@
 
     .slick-arrow.slick-next {
         right: 0;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .btn-filter-collpase {
+        display: block;
+    }
+
+    #filter_collapse {
+        padding: 18px 60px;
+        display: block;
+
+        &.collapse:not(.show) {
+            display: none;
+        }
+
+        button {
+            text-align: left;
+            padding: 0 15px;
+        }
     }
 }

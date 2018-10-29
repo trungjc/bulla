@@ -1,0 +1,115 @@
+﻿.head-location,
+.submit-contact {
+    h3 {
+        font-size: 2.4rem;
+        margin-bottom: 10px;
+    }
+
+    p {
+        line-height: 16px;
+    }
+}
+
+.location-container {
+    text-align: center;
+
+    h3 {
+        font-size: 2.4rem;
+        margin-bottom: 10px;
+    }
+
+    p {
+        line-height: 16px;
+
+        a {
+            color: $primary-color-active;
+        }
+    }
+}
+
+.submit-contact {
+    .contact-form-header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .contact-form-body {
+        max-width: 500px;
+        margin: 0 auto;
+
+        .form-control {
+            background-color: #004162;
+            color: #fff8f0;
+            border: none;
+            border-radius: 4px;
+            height: auto;
+            padding: 15px 25px;
+            margin-top: 20px;
+
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        textarea.form-control {
+            height: 160px;
+            margin-bottom: 0px;
+            border: none;
+            border-radius: 4px;
+            padding: 25px;
+        }
+
+        .input-checkbox {
+            font-size: 16px;
+            margin-top: 20px;
+
+            a {
+                font-weight: 700;
+
+                &:hover {
+                    color: $body-color;
+                    text-decoration: underline !important;
+                }
+            }
+        }
+
+        .primary-btn {
+            font-weight: 400;
+            font-size: 14px;
+            padding: 10px;
+        }
+    }
+}
+
+.factural-plant {
+    h2 {
+        font-size: 3.3rem;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        font-size: 2.4rem;
+        margin-bottom: 10px;
+    }
+
+    p {
+        line-height: 16px;
+    }
+}
+
+.js-contact-us {
+    @include media-breakpoint-down(md) {
+        .wn-banner {
+            h3 {
+                width: 100%;
+                font-size: 6.5rem;
+                padding: 20px;
+                transform: translate(0,0);
+                left: 0;
+                top: auto;
+                bottom: 0;
+                padding: 20px 20px 0 20px;
+            }
+        }
+    }
+}
