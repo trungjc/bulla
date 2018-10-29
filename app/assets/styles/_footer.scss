@@ -22,6 +22,10 @@ footer {
             a {
                 font-weight: 900;
                 font-size: 1.7rem;
+                @include transition(0.3s);
+                &:hover {
+                    opacity: 0.8;
+                }
             }
         }
     }
