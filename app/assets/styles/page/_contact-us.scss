@@ -33,48 +33,6 @@
     .contact-form-body {
         max-width: 500px;
         margin: 0 auto;
-
-        .form-control {
-            background-color: #004162;
-            color: #fff8f0;
-            border: none;
-            border-radius: 4px;
-            height: auto;
-            padding: 15px 25px;
-            margin-top: 20px;
-
-            &:focus {
-                box-shadow: none;
-            }
-        }
-
-        textarea.form-control {
-            height: 160px;
-            margin-bottom: 0px;
-            border: none;
-            border-radius: 4px;
-            padding: 25px;
-        }
-
-        .input-checkbox {
-            font-size: 16px;
-            margin-top: 20px;
-
-            a {
-                font-weight: 700;
-
-                &:hover {
-                    color: $body-color;
-                    text-decoration: underline !important;
-                }
-            }
-        }
-
-        .primary-btn {
-            font-weight: 400;
-            font-size: 14px;
-            padding: 10px;
-        }
     }
 }
 
@@ -108,5 +66,43 @@
                 padding: 20px 20px 0 20px;
             }
         }
+    }
+}
+
+.FAQ {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    margin-top: 40px;
+
+    li {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        border-bottom: 1px solid #fff;
+        padding: 40px 0;
+    }
+}
+
+#showFAQ {
+    padding: 15px;
+}
+
+.post-content {
+    .post-text {
+        > div {
+            margin: 0 auto;
+
+            .section-header {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+.js-story {
+    section {
+        padding: 30px 0;
     }
 }

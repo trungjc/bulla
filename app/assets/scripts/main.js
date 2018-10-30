@@ -111,6 +111,16 @@ var app = {
                 });
             }
         }
+    },
+    validateRuleAccept: function () {
+        $('#submitbtn').on('click', function () {
+            if ($('#agree_privacy').prop('checked')) {
+                $('#agreeBox').removeClass('error');
+            }
+            else {
+                $('#agreeBox').addClass('error');
+            }
+        })
     }
 };
 
@@ -179,8 +189,21 @@ var recipes = {
             autoplay: true,
             autoplaySpeed: 2000,
         });
+    },
+    initSearch: function () {
+        $('#searchBtn').on('click', function () {
+            $('.recipe').addClass('show-search');
+        })
+        $('#closeSearch').on('click', function () {
+            $('.recipe').removeClass('show-search');
+        })
+    },
+    onFilterClick: function () {
+        $('#filter li > a').off('click').on('click', function (e) {
+            $('#filterText').text($(this).text());
+        })
     }
-}
+};
 $(document).ready(function () {
     if ($('.js-home').length > 0) {
         app.init();
@@ -190,9 +213,14 @@ $(document).ready(function () {
     };
     if ($('.js-recipe').length > 0) {
         recipes.slide();
+        recipes.initSearch();
+        recipes.onFilterClick();
     };
     if ($('.js-products').length > 0) {
         product.menuFilter();
+    }
+    if ($('.js-contact-us').length > 0) {
+        app.validateRuleAccept();
     }
     app.mobile();
     var resizeId;

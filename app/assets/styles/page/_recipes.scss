@@ -16,6 +16,10 @@
             left: auto;
             text-align: right;
             padding: 0 5%;
+
+            @include media-breakpoint-down(md) {
+                font-size: 4rem;
+            }
         }
     }
 }
@@ -27,16 +31,18 @@
 
     .filter-recipe {
         background-color: #e7f5f8;
-        margin: 0;
+        position: relative;
 
         a {
             font-weight: 900;
             padding: 17px 15px;
             display: block;
             text-align: center;
+
             &:hover {
                 text-decoration: none;
             }
+
             &:after {
                 content: none;
             }
@@ -61,6 +67,39 @@
         }
     }
 
+    .search-group {
+        position: absolute;
+        width: calc(100% - 30px);
+        top: -20px;
+        color: $white;
+        display: none;
+
+        #closeSearch {
+            font-size: 3rem;
+            line-height: 60px;
+            cursor: pointer;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            color: #fff;
+
+            &:hover {
+                opacity: 0.85;
+            }
+        }
+
+        input {
+            color: $white;
+        }
+    }
+
+    &.show-search {
+        .search-group {
+            display: block;
+        }
+    }
+
+
     .fa-search {
         font-size: 3rem;
         line-height: 56px;
@@ -71,11 +110,19 @@
     }
 
     .recipe-list {
-        margin: 20px -10px;
+        margin: 20px -30px;
+
+        @include media-breakpoint-down(md) {
+            margin: 20px -15px;
+        }
 
         > div {
-            padding: 0 10px;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+
+            @include media-breakpoint-down(md) {
+                margin-bottom: 0px;
+                padding: 15px 15px;
+            }
         }
     }
 }
@@ -162,6 +209,7 @@
             .relate-product-re {
                 .item {
                     text-align: center;
+
                     a {
                         display: block;
 

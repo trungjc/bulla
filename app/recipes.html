@@ -49,16 +49,16 @@
                     </li>
                     <li class="nav-item dropdown-sub sub-menu ">
                         <a class="nav-link" href="whats-news.html">what's new</a>
-                        <ul class="dropdown-menu">
+                        <!--<ul class="dropdown-menu">
                             <li><a href="#">Company overview</a></li>
                             <li><a href="#">Vision &amp; Strategy</a></li>
                             <li><a href="#">Company Structure</a></li>
                             <li><a href="#">Board of Directors</a></li>
                             <li><a href="#">Products Pipeline</a></li>
                             <li><a href="#">Corporate Governance</a></li>
-                        </ul>
+                        </ul>-->
                     </li>
-        
+
                     <li class="nav-item">
                         <a href="products.html" class="nav-link ">products</a>
                     </li>
@@ -107,21 +107,21 @@
         <section class="recipe">
             <div class="container">
                 <div class="row filter-recipe">
-                    <div class="col-lg-3 dropup">                                                
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">filter by product</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">clear</a></li>
-                            <li><a href="#">Bulla Cottage Cheese Original 200g</a></li>
-                            <li><a href="#">Bulla Sour Cream 200mL</a></li>
-                            <li><a href="#">Bulla Spreadable Feta Greek Style Original 150g</a></li>
-                            <li><a href="#">Bulla Creamy Classics Vanilla &amp; Boysenberry 2L</a></li>
-                            <li><a href="#">Bulla Creamy Classics Ice Cream Choc Chip 2L</a></li>
-                            <li><a href="#">Bulla Creamy Classics Ice Cream Mint Choc 2L</a></li>
-                            <li><a href="#">Bulla Creamy Classics Ice Cream Cookies &amp; Cream 2L</a></li>
-                            <li><a href="#">Bulla Creamy Classics Ice Cream Vanilla 2L</a></li>
-                            <li><a href="#">Bulla Dollop Thick Cream 200ml</a></li>
-                            <li><a href="#">Bulla Real Dairy NUT FREE* Vanilla 2L</a></li>
-                            <li><a href="#">Bulla Spreadable Feta Greek Style Herbs &amp; Garlic 150g</a></li>                        
+                    <div class="col-lg-3 dropup">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" id="filterText">filter by product</a>
+                        <ul class="dropdown-menu" id="filter">
+                            <li><a href="javascript:void(0)">clear</a></li>
+                            <li><a href="javascript:void(0)">Bulla Cottage Cheese Original 200g</a></li>
+                            <li><a href="javascript:void(0)">Bulla Sour Cream 200mL</a></li>
+                            <li><a href="javascript:void(0)">Bulla Spreadable Feta Greek Style Original 150g</a></li>
+                            <li><a href="javascript:void(0)">Bulla Creamy Classics Vanilla &amp; Boysenberry 2L</a></li>
+                            <li><a href="javascript:void(0)">Bulla Creamy Classics Ice Cream Choc Chip 2L</a></li>
+                            <li><a href="javascript:void(0)">Bulla Creamy Classics Ice Cream Mint Choc 2L</a></li>
+                            <li><a href="javascript:void(0)">Bulla Creamy Classics Ice Cream Cookies &amp; Cream 2L</a></li>
+                            <li><a href="javascript:void(0)">Bulla Creamy Classics Ice Cream Vanilla 2L</a></li>
+                            <li><a href="javascript:void(0)">Bulla Dollop Thick Cream 200ml</a></li>
+                            <li><a href="javascript:void(0)">Bulla Real Dairy NUT FREE* Vanilla 2L</a></li>
+                            <li><a href="javascript:void(0)">Bulla Spreadable Feta Greek Style Herbs &amp; Garlic 150g</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-3">
@@ -134,8 +134,11 @@
                         <a href="#">most recent</a>
                     </div>
                 </div>
-                <a href="#"><i class="fa fa-search" aria-hidden="true" style=""></i></a>
-
+                <a id="searchBtn" href="javascript:void(0)"><i class="fa fa-search" aria-hidden="true" style=""></i></a>
+                <div class="search-group">
+                    <input class="form-control" type="text" placeholder="Search..." value="">
+                    <a id="closeSearch" href="javascript:void(0)"><i class="fas fa-times" aria-hidden="true" style=""></i></a>
+                </div>
                 <div class="recipe-list row row-mobile">
                     <div class="col-xs-6 col-sm-4 col-md-3">
                         <a href="#">
