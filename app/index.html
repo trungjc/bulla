@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Home</title>
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     <!-- Place favicon.ico in the root directory -->
     <!-- build:css assets/styles/vendor.css -->
     <!-- bower:css -->
@@ -22,7 +23,6 @@
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script src="/bower_components/slick-carousel/slick/slick.js"></script>
-    <script src="/bower_components/isotope-layout/dist/isotope.pkgd.js"></script>
     <!-- endbuild -->
     
     <!-- build:js assets/scripts/main.js -->
@@ -50,14 +50,15 @@
                     </li>
                     <li class="nav-item dropdown-sub sub-menu ">
                         <a class="nav-link" href="whats-news.html">what's new</a>
-                        <!--<ul class="dropdown-menu">
+                        <i class="fas fa-angle-down"></i>
+                        <ul class="dropdown-menu">
                             <li><a href="#">Company overview</a></li>
                             <li><a href="#">Vision &amp; Strategy</a></li>
                             <li><a href="#">Company Structure</a></li>
                             <li><a href="#">Board of Directors</a></li>
                             <li><a href="#">Products Pipeline</a></li>
                             <li><a href="#">Corporate Governance</a></li>
-                        </ul>-->
+                        </ul>
                     </li>
 
                     <li class="nav-item">
@@ -70,6 +71,9 @@
                         <a href="careers.html" class="nav-link">careers </a>
                     </li>
                     <li class="nav-item">
+                        <a href="careers.html" class="nav-link">foodservice  </a>
+                    </li>
+                    <li class="nav-item">
                         <a href="" class="nav-link">international </a>
                     </li>
                     <li class="nav-item">
@@ -80,21 +84,39 @@
         </nav>
     </header>
     <main class="js-home">
-        <section class="banner">
+        <!--<section class="banner">-->
+            <!--<div class="container">-->
+                <!--<div class="slick-banner" id="slickBanner">-->
+                    <!--<div>-->
+                        <!--<img src="assets/images/YgGVWtGhLo.jpg" />-->
+                    <!--</div>-->
+                    <!--<div>-->
+                        <!--<img src="assets/images/YvZF8jNebe.jpg" />-->
+                    <!--</div>-->
+                    <!--<div>-->
+                        <!--<img src="assets/images/fIpKOXv3vT.jpg" />-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</section>-->
+    
+        <section class="wn-banner pb-4">
             <div class="container">
-                <div class="slick-banner" id="slickBanner">
-                    <div>
+                <div class="banner" >
+                    <div class="item">
                         <img src="assets/images/YgGVWtGhLo.jpg" />
                     </div>
-                    <div>
+                    <div class="item">
                         <img src="assets/images/YvZF8jNebe.jpg" />
                     </div>
-                    <div>
+                    <div class="item">
                         <img src="assets/images/fIpKOXv3vT.jpg" />
                     </div>
                 </div>
             </div>
         </section>
+        
+        
         <section class="what-news">
             <div class="container">
                 <h2 class="section-title">
@@ -175,8 +197,8 @@
                 </div>
             </div>
         </section>
-        <section class="bg-prallax trunk">
-            <img src="assets/images/bg_2.jpg" />
+        <section class="bg-prallax trunk" style="background-image: url(assets/images/bg_2.jpg)">
+            <img src="assets/images/bg_2.jpg" alt="">
         </section>
         <section class="story">
             <div class="content">
@@ -207,13 +229,13 @@
                         <p>We consciously act with integrity, generosity and stand by our family values, with the aim of delivering sustainable profit for our family, the community and the future environment.<br></p>
                     </div>
                 </div>
-                <div class="text-center">
+                <div class="text-center mt-5">
                     <a href="#" class="btn primary-btn">Find out more</a>
                 </div>
             </div>
         </section>
-        <section class="bg-prallax party">
-            <img src="assets/images/bg_1.jpg" />
+        <section class="bg-prallax party" style="background-image: url(assets/images/bg_1.jpg)">
+            <img src="assets/images/bg_2.jpg" alt="">
         </section>
         <section class="product">
             <div class="container">
@@ -256,8 +278,8 @@
                 </div>
             </div>
         </section>
-        <section class="bg-prallax cake">
-            <img src="assets/images/bg_3.jpg" />
+        <section class="bg-prallax cake" style="background-image: url(assets/images/bg_3.jpg)">
+            <img src="assets/images/bg_3.jpg" alt="">
         </section>
         <section class="recipe">
             <div class="container">
@@ -307,13 +329,13 @@
                         </a>
                     </div>
                 </div>
-                <div class="text-center">
+                <div class="text-center mt-3">
                     <a href="#" class="btn primary-btn">View more recipes</a>
                 </div>
             </div>
         </section>
-        <section class="bg-prallax family">
-            <img src="assets/images/bg_4.jpg" />
+        <section class="bg-prallax family" style="background-image: url(assets/images/bg_4.jpg)">
+            <img src="assets/images/bg_4.jpg" alt="">
         </section>
         <section class="service">
             <div class="content">
@@ -368,24 +390,24 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-lg-2 col-sm-12 col-xs-12 f-logo">
+                <div class="col-lg-2 col-sm-3 col-xs-12 f-logo">
                     <a class="logo" href="#"><img src="assets/images/logo2.png" class="img-responsive" alt=""></a>
                 </div>
-                <div class="col-lg-2 col-sm-12 col-xs-12">
+                <div class="col-lg-2 col-sm-3 col-xs-12">
                     <ul>
                         <li><a href="#/the-bulla-story">the bulla story</a></li>
                         <li><a href="#/whats-new">what's new</a></li>
                         <li><a href="#/products">products</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-2 col-sm-12 col-xs-12">
+                <div class="col-lg-2 col-sm-3 col-xs-12">
                     <ul>
                         <li><a href="/recipes">recipes</a></li>
-                        <li><a ui-sref="careers" href="#/careers">careers</a></li>
+                        <li><a href="careers" href="#/careers">careers</a></li>
                         <li><a href="https://www.bullafoodservice.com.au" id="footer-foodservice-link" target="_blank">foodservice</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-3 col-sm-12 col-xs-12">
+                <div class="col-lg-3 col-sm-3 col-xs-12">
                     <div class="locations">
                         <h3>head office</h3>
                         <p>
@@ -395,7 +417,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-12 col-xs-12">
+                <div class="col-lg-3 col-sm-3 col-xs-12">
                     <div class="social-container">
                         <h3>Join the bulla family</h3>
                         <ul>
@@ -413,9 +435,9 @@
                             </li>
                         </ul>
                         <div class="link-rapper">
-                            <a ui-sref="termsandconditions" href="#/termsandconditions">terms &amp; conditions of purchase |</a>
-                            <a ui-sref="privacy" href="#/privacy">privacy |</a>
-                            <a ui-sref="legal" href="#/legal">legal</a>
+                            <a href="termsandconditions" href="#/termsandconditions">terms &amp; conditions of purchase |</a>
+                            <a href="privacy" href="#/privacy">privacy |</a>
+                            <a href="legal" href="#/legal">legal</a>
                         </div>
                     </div>
                 </div>

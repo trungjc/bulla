@@ -8,24 +8,12 @@ var app = {
         app.slider();
     },
     slider: function () {
-        //$('.slick-banne').slick({
-        //    slidesToShow: 1,
-        //    slidesToScroll: 1,
-        //    arrows: false,
-        //    fade: true,
-        //    dots: true,
-        //    //customPaging : function(slider, i) {
-        //    //  var thumb = $(slider.$slides[i]).find('.item').attr('data-thumb');
-        //    //  console.log(thumb);
-        //    //  return '<a><img src="' + thumb + '"></a>'
-        //    //}
-        //});
-        $('#slickBanner').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            dots: false,
-            arrows: true,
-        });
+        // $('#slickBanner').slick({
+        //     slidesToShow: 1,
+        //     slidesToScroll: 1,
+        //     dots: false,
+        //     arrows: true,
+        // });
         $('#newsSlider').slick({
             slidesToShow: 4,
             slidesToScroll: 2,
@@ -44,6 +32,32 @@ var app = {
                 }
             }]
         });
+          $('.banner').slick({
+            slidesToScroll: 1,
+            dots: false,
+            arrows: true,
+            responsive:
+            [
+              {
+                breakpoint: 1024,
+                settings: {
+                  arrows: false,
+                  autoplay: true,
+                  autoplaySpeed: 2000
+                }
+              }
+              ]
+          });
+
+          $('.testimonial-slider').slick({
+            slidesToScroll: 1,
+            dots: false,
+            arrows: false,
+            fade: true,
+            cssEase: 'linear',
+            autoplay: true,
+            autoplaySpeed: 3000
+          });
     },
     mobile: function () {
         let winWidth = window.innerWidth;
@@ -54,6 +68,17 @@ var app = {
         else {
             $('#mobile_menu').removeClass('collapse');
         }
+
+        $('.mb-btn').on('click',function () {
+            $(this).toggleClass('active');
+          $('html').toggleClass('show-menu');
+        })
+        $('#mobile_menu li .fas').on('click',function (e) {
+
+            $(this).toggleClass('active');
+            $(this).next().toggleClass('active');
+          e.preventDefault();
+        })
     },
     initEqualHeight: function () {
         if (isMobileScreen()) return;
@@ -112,19 +137,20 @@ var app = {
             }
         }
     },
-    validateRuleAccept: function () {
-        $('#submitbtn').on('click', function () {
-            if ($('#agree_privacy').prop('checked')) {
-                $('#agreeBox').removeClass('error');
-            }
-            else {
-                $('#agreeBox').addClass('error');
-            }
-        })
-    }
+    // validateRuleAccept: function () {
+    //     $('#submitbtn').on('click', function () {
+    //         if ($('#agree_privacy').prop('checked')) {
+    //             $('#agreeBox').removeClass('error');
+    //         }
+    //         else {
+    //             $('#agreeBox').addClass('error');
+    //         }
+    //     })
+    // }
 };
 
 var product = {
+
     init: function () {
         product.filter()
     },
@@ -179,17 +205,9 @@ var product = {
         }
     }
 };
+
 var recipes = {
-    slide: function () {
-        $('#rcpSlide').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            dots: false,
-            arrows: false,
-            autoplay: true,
-            autoplaySpeed: 2000,
-        });
-    },
+
     initSearch: function () {
         $('#searchBtn').on('click', function () {
             $('.recipe').addClass('show-search');
@@ -201,29 +219,28 @@ var recipes = {
     onFilterClick: function () {
         $('#filter li > a').off('click').on('click', function (e) {
             $('#filterText').text($(this).text());
+            if($(this).text() === 'clear') {
+              $('#filterText').text('filter by product');
+            } else {
+              $('#filterText').text($(this).text());
+            }
         })
     }
 };
+
+
 $(document).ready(function () {
-    if ($('.js-home').length > 0) {
-        app.init();
-    };
-    if ($('.js-products-detail').length > 0) {
-        product.slide();
-    };
-    if ($('.js-recipe').length > 0) {
-        recipes.slide();
-        recipes.initSearch();
-        recipes.onFilterClick();
-    };
-    if ($('.js-products').length > 0) {
-        product.menuFilter();
-    }
-    if ($('.js-contact-us').length > 0) {
-        app.validateRuleAccept();
-    }
+
     app.mobile();
+    app.init();
+    product.slide();
+    recipes.initSearch();
+    recipes.onFilterClick();
+    product.menuFilter();
+
     var resizeId;
+
+
     $(window).resize(function () {
         clearTimeout(resizeId);
         resizeId = setTimeout(function () {

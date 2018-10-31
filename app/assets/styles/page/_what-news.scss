@@ -1,39 +1,8 @@
-﻿.wn-banner {
-    .container {
-        position: relative;
-    }
-
-    .row {
-        display: block;
-    }
-
-    h3 {
-        font-size: 7.1rem;
-        position: absolute;
-        top: 50%;
-        left: 0;
-        @include translate(0,-50%);
-        font-weight: 900;
-        color: #fff;
-        padding: 20px 58px 10px 58px;
-
-        @include media-breakpoint-down(md) {
-            font-size: 4rem;
-        }
-    }
-
-    &.text-a-center {
-        h3 {
-            left: 50%;
-            @include translate(-50%,-50%);
-        }
-    }
-}
-
+﻿
 .wn-list-item {
     padding-top: 0;
     .container {
-        padding: 0 5px;
+        //padding: 0 5px;
 
         .row {
             margin: 0 -5px;

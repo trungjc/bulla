@@ -4,7 +4,63 @@
         overflow: hidden;
     }
 }
+.testimonial-slider {
+    .quote {
+        background: #009ABF;
+        color: white;
+        font-weight: 900;
+        line-height: 1.2;
+        blockquote {
+            font-size: 2.8rem;
+            font-style: italic;
 
+            margin:0 0 30px;
+            position: relative;
+            .fas {
+                position: absolute;
+                top:0;
+                left: -40px;
+                transform: rotate(-180deg);
+                &:last-child {
+                    position: relative;
+                    bottom:auto;
+                    top: 5px;
+                    left: auto;
+                    right:auto;
+                    transform: rotate(0deg);
+                }
+            }
+        }
+        img {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .text {
+            max-width: 780px;
+            padding:0 20px;
+            width: 100%;
+            left: 50%;
+            @include translate(-50%,-50%);
+        }
+        .information {
+            font-weight: bold;
+            font-size: 2.2rem;
+            text-align: right;
+        }
+        @include media-breakpoint-down(md) {
+            .fas {
+                position: static!important;
+            }
+            blockquote {
+                font-size: 1.2rem;
+                margin:0;
+            }
+            .information {
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
 .receipe-banner {
     .content {
         position: relative;
@@ -38,7 +94,9 @@
             padding: 17px 15px;
             display: block;
             text-align: center;
-
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
             &:hover {
                 text-decoration: none;
             }
@@ -50,7 +108,7 @@
 
         .dropdown-menu {
             padding: 0;
-            left: -15px !important;
+            //left: -15px !important;
             border: 0;
 
             li {
@@ -70,16 +128,17 @@
     .search-group {
         position: absolute;
         width: calc(100% - 30px);
-        top: -20px;
+        top: 0px;
         color: $white;
         display: none;
 
         #closeSearch {
             font-size: 3rem;
-            line-height: 60px;
             cursor: pointer;
+            line-height: 1;
             position: absolute;
-            top: 15px;
+            top: 50%;
+            @include translateY(-50%);
             right: 15px;
             color: #fff;
 
@@ -89,7 +148,10 @@
         }
 
         input {
+            font-weight: bold;
+            font-size: 1.5rem;
             color: $white;
+            @include placeholder(white)
         }
     }
 
@@ -110,18 +172,14 @@
     }
 
     .recipe-list {
-        margin: 20px -30px;
-
-        @include media-breakpoint-down(md) {
-            margin: 20px -15px;
-        }
+        margin: 20px -10px 0;
 
         > div {
-            margin-bottom: 30px;
-
+            margin-bottom: 20px;
+            padding: 0 10px;
             @include media-breakpoint-down(md) {
                 margin-bottom: 0px;
-                padding: 15px 15px;
+                padding: 10px 10px;
             }
         }
     }
@@ -187,22 +245,11 @@
         }
 
         .c-right {
-            h2 {
-                margin: 0 0 35px 0;
-                font-size: 3.4rem;
-                font-weight: 900;
-            }
 
-            h3 {
-                font-size: 2.3rem;
-                font-weight: 900;
-                margin-bottom: 25px;
-            }
 
             ol {
                 li {
                     margin-bottom: 15px;
-                    line-height: 22px;
                 }
             }
 
@@ -230,4 +277,20 @@
             }
         }
     }
+    @include media-breakpoint-down(lg) {
+        .re-title .icon{
+            text-align: center;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            img {
+                max-height: 20px;
+                display: block;
+                margin: 15px auto 10px!important;
+            }
+        }
+        .share span:last-child a img {
+            height: 15px;
+        }
+    }
+
 }

@@ -6,7 +6,6 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: $body-bg-color;
-
     img {
         max-width: 100%;
         display: inline-block;
@@ -14,14 +13,14 @@ body {
 }
 
 
-h1, h2, h3 {
+h1, h2, h3,h4 ,h5,h6{
     font-family: $headings-font-family;
     font-weight: 900;
+    margin: 0 0 2.5rem;
 }
 
 h4 {
     font-size: 2.0rem;
-    font-weight: 900;
 }
 
 .title {
@@ -30,7 +29,6 @@ h4 {
 
 h2 {
     font-size: 3.4rem;
-    letter-spacing: -1px;
 }
 
 h3 {
@@ -49,10 +47,11 @@ h6 {
     font-size: 1.4rem;
 }
 
-p {
+p ,ul{
     line-height: 16px;
+    margin: 0 0 1.5rem;
 }
-b{
+b,strong{
     font-weight:900;
 }
 img {
@@ -70,7 +69,11 @@ img {
 .pull-right {
     float: right;
 }
-
+h2,h3,h1 {
+    a:hover {
+        text-decoration: none;
+    }
+}
 .clearfix {
     &:after, &:before {
         content: "";
@@ -116,12 +119,12 @@ img {
 
 .section-title {
     //font-size: 3.4rem;
-    margin: 0 0 30px 0;
+    //margin: 0 0 30px 0;
     text-align: center;
 
-    @include media-breakpoint-down(md) {
-        margin: 0 0 15px 0;
-    }
+    //@include media-breakpoint-down(md) {
+    //    margin: 0 0 15px 0;
+    //}
 }
 
 a {
@@ -136,24 +139,22 @@ a {
 
 .slick-arrow {
     position: absolute;
-    top: 45%;
+    top: 50%;
+    @include translateY(-50%);
     z-index: 9;
-    width: 40px;
-    height: 40px;
     border: 0;
     overflow: hidden;
     line-height: 0;
     text-align: center;
     outline: 0;
     width: 30px;
-    height: 80px;
+    height: 40px;
     text-indent: -9999999px;
     background-color: transparent;
     cursor: pointer;
     outline: none !important;
-
-    @include media-breakpoint-down(md) {
-        top: 30%;
+    &.slick-disabled {
+        display: none;
     }
 
     &:after {
@@ -166,7 +167,7 @@ a {
     }
 
     &.slick-next {
-        right: 15px;
+        right: 10px;
 
         &:after {
             background-image: url('../images/right-arrow.png');
@@ -180,7 +181,7 @@ a {
     }
 
     &.slick-prev {
-        left: 15px;
+        left: 10px;
 
         &:after {
             background-image: url('../images/left-arrow.png');
@@ -207,7 +208,7 @@ section {
     padding: 60px 0;
 
     @include media-breakpoint-down(md) {
-        padding: 30px 0;
+        padding: 40px 0;
     }
 }
 
@@ -215,7 +216,7 @@ section {
     background-color: $primary-color-active;
     text-shadow: none;
     color: $white;
-    width: 240px;
+    min-width: 240px;
     background-image: -webkit-linear-gradient(top, #169bbf 0, #169bbf 100%);
     background-image: -o-linear-gradient(top, #169bbf 0, #169bbf 100%);
     background-image: -webkit-gradient(linear, left top, left bottom, from(#169bbf), to(#169bbf));
@@ -224,7 +225,6 @@ section {
     filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
     background-repeat: repeat-x;
     font-size: 2rem;
-    margin-top: 30px;
     line-height: 2;
     padding: 8px 36px;
     cursor: pointer;
@@ -248,24 +248,23 @@ section {
         max-width: 33.33333333%;
     }
 
-    .row:not(.row-mobile) {
-        display: block;
-    }
+    //.row:not(.row-mobile) {
+    //    display: block;
+    //}
 }
 
 .form-control {
     background-color: #004162;
-    color: #fff8f0;
+    @include placeholder(#999);
+    color: white;
     border: none;
     border-radius: 4px;
     padding: 15px 25px;
-    margin-top: 20px;
     height: 54px;
-
     &:focus {
         box-shadow: none;
         background-color: #004162;
-        color: #fff8f0;
+        color: white;
     }
 }
 

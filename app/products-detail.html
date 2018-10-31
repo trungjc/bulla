@@ -1,13 +1,14 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Home</title>
-
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <title>Product detail</title>
+    
+    <link rel="apple-touch-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     <!-- Place favicon.ico in the root directory -->
     <!-- build:css assets/styles/vendor.css -->
     <!-- bower:css -->
@@ -22,8 +23,8 @@
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script src="/bower_components/slick-carousel/slick/slick.js"></script>
-    <script src="/bower_components/isotope-layout/dist/isotope.pkgd.js"></script>
     <!-- endbuild -->
+    
     <!-- build:js assets/scripts/main.js -->
     <script src="assets/scripts/main.js"></script>
     <!-- endbuild -->
@@ -49,16 +50,17 @@
                     </li>
                     <li class="nav-item dropdown-sub sub-menu ">
                         <a class="nav-link" href="whats-news.html">what's new</a>
-                        <!--<ul class="dropdown-menu">
+                        <i class="fas fa-angle-down"></i>
+                        <ul class="dropdown-menu">
                             <li><a href="#">Company overview</a></li>
                             <li><a href="#">Vision &amp; Strategy</a></li>
                             <li><a href="#">Company Structure</a></li>
                             <li><a href="#">Board of Directors</a></li>
                             <li><a href="#">Products Pipeline</a></li>
                             <li><a href="#">Corporate Governance</a></li>
-                        </ul>-->
+                        </ul>
                     </li>
-        
+                
                     <li class="nav-item">
                         <a href="products.html" class="nav-link active">products</a>
                     </li>
@@ -67,6 +69,9 @@
                     </li>
                     <li class="nav-item">
                         <a href="careers.html" class="nav-link">careers </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="careers.html" class="nav-link">foodservice  </a>
                     </li>
                     <li class="nav-item">
                         <a href="" class="nav-link">international </a>
@@ -79,17 +84,19 @@
         </nav>
     </header>
     <main class="js-products-detail">
-        <section class="product-detail">
+        <section class="product-detail mt-5 pb-0">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
-                        <img src="assets/images/pd_1.png" />
+                        <div class="col-lg-10">
+                            <img src="assets/images/pd_1.png" />
+                        </div>
                     </div>
                     <div class="col-lg-6 info">
                         <h2>Bulla Creamy Classics Ice Cream Vanilla 2L</h2>
                         <p>Bulla Creamy Classics Vanilla real ice cream is made with  fresh cream and full cream milk for a deliciously smooth and creamy texture. Traditionally crafted by Bulla for your enjoyment.</p>
-                        <h4>also available in:</h4>
-                        <ul class="avalable-in">
+                        <h4 class="mb-3">also available in:</h4>
+                        <ul class="avalable-in mb-4">
                             <li>
                                 <a href="#">
                                     <img src="assets/images/pd_2.png" />
@@ -127,7 +134,7 @@
                         </div>
                     </div>
                     <div class="product-des col-lg-4">
-                        <h5 class="ng-binding">Description</h5>
+                        <h5 class="mb-2">Description</h5>
                         <p style="line-height: 24px;" ng-bind-html="feature.value | noHTML | newlines | unsafe" class="ng-binding">Real ice cream made with fresh milk and cream.</p>
                     </div>
                 </div>
@@ -224,24 +231,24 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-lg-2 col-sm-12 col-xs-12 f-logo">
+                <div class="col-lg-2 col-sm-3 col-xs-12 f-logo">
                     <a class="logo" href="#"><img src="assets/images/logo2.png" class="img-responsive" alt=""></a>
                 </div>
-                <div class="col-lg-2 col-sm-12 col-xs-12">
+                <div class="col-lg-2 col-sm-3 col-xs-12">
                     <ul>
                         <li><a href="#/the-bulla-story">the bulla story</a></li>
                         <li><a href="#/whats-new">what's new</a></li>
                         <li><a href="#/products">products</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-2 col-sm-12 col-xs-12">
+                <div class="col-lg-2 col-sm-3 col-xs-12">
                     <ul>
                         <li><a href="/recipes">recipes</a></li>
-                        <li><a ui-sref="careers" href="#/careers">careers</a></li>
+                        <li><a href="careers" href="#/careers">careers</a></li>
                         <li><a href="https://www.bullafoodservice.com.au" id="footer-foodservice-link" target="_blank">foodservice</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-3 col-sm-12 col-xs-12">
+                <div class="col-lg-3 col-sm-3 col-xs-12">
                     <div class="locations">
                         <h3>head office</h3>
                         <p>
@@ -251,7 +258,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-12 col-xs-12">
+                <div class="col-lg-3 col-sm-3 col-xs-12">
                     <div class="social-container">
                         <h3>Join the bulla family</h3>
                         <ul>
@@ -269,9 +276,9 @@
                             </li>
                         </ul>
                         <div class="link-rapper">
-                            <a ui-sref="termsandconditions" href="#/termsandconditions">terms &amp; conditions of purchase |</a>
-                            <a ui-sref="privacy" href="#/privacy">privacy |</a>
-                            <a ui-sref="legal" href="#/legal">legal</a>
+                            <a href="termsandconditions" href="#/termsandconditions">terms &amp; conditions of purchase |</a>
+                            <a href="privacy" href="#/privacy">privacy |</a>
+                            <a href="legal" href="#/legal">legal</a>
                         </div>
                     </div>
                 </div>

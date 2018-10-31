@@ -11,7 +11,7 @@
             width: calc(100% - 30px );
             text-align: center;
             @include border-radius(0);
-            padding: 0;
+            padding: 8px 10px;
         }
 
         button {
@@ -27,9 +27,10 @@
 
             @include media-breakpoint-down(md) {
                 border: 0;
-                padding: 15px;
+                padding:4px 15px;
                 width: 100%;
                 display: block;
+                text-align: center;
             }
 
             &:hover,
@@ -70,12 +71,15 @@
                 @include media-breakpoint-down(md) {
                     width: 100%;
                     display: block;
+                    text-align: center;
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    img {
+                       display: inline;
+                    }
                 }
 
-                h3 {
-                    font-size: 2.9rem;
-                    font-weight: 900;
-                }
+
             }
 
             &:hover {
@@ -91,22 +95,6 @@
 
 .product-detail {
     .info {
-        h2 {
-            font-size: 3.4rem;
-            font-weight: 900;
-            line-height: 37.4px;
-            margin: 20px 0 10px 0;
-        }
-
-        p {
-            line-height: 19px;
-        }
-
-        h4 {
-            font-size: 2.0rem;
-            font-weight: 900;
-            margin: 20px 0 10px 0;
-        }
 
         .avalable-in {
             padding: 0;
@@ -152,15 +140,6 @@
     .product-des {
         margin: 40px 0 20px 0;
 
-        h5 {
-            font-size: 1.6rem;
-            margin: 4px 0;
-            font-weight: 900;
-        }
-
-        p {
-            line-height: 24px;
-        }
     }
 }
 
@@ -169,7 +148,6 @@
 
     .section-title {
         text-align: left;
-        padding-left: 15px;
     }
 
     .news-item {
@@ -184,9 +162,8 @@
         padding: 0 10px;
 
         h3 {
-            font-size: 2.4rem;
+            font-size: 2rem;
             margin: 20px 0 0 0;
-            font-weight: bold;
             color: $body-bg-color;
         }
     }
@@ -213,9 +190,6 @@
             display: none;
         }
 
-        button {
-            text-align: left;
-            padding: 0 15px;
-        }
+
     }
 }
